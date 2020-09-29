@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js">
+  </script>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+  <style>
+  table{
+	  margin: 0 auto;
+	  width: 100%;
+	  clear: both;
+	  border-collapse: collapse;
+	  table-layout: fixed; // ***********add this
+	  word-wrap:break-word; // ***********and this
+	}
+		
+    td.details-control {
+      text-align: center;
+      color: forestgreen;
+      cursor: pointer;
+    }
+
+    tr.shown td.details-control {
+      text-align: center;
+      color: forestgreen;
+    }
+
+    pre {
+       outline: 1px solid #ccc; 
+    padding: 5px; 
+    margin: 5px; 
+    white-space: pre-wrap;       
+    white-space: -moz-pre-wrap;  
+    white-space: -pre-wrap;      
+    white-space: -o-pre-wrap;    
+    word-wrap: break-word;   
+    
+    }
+    
+    table.resulttable {
+        table-layout: fixed;
+        word-wrap: break-word;
+    }    
+    table.summarytable td {
+   text-align: center;  
+}
+    
+}
+  </style>
+  <title>Infinera PACE Automation Report</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md">
+        <p><u> Report Generated On <b>17-June-2020  at 15:31</b> By Infinera PACE Automation Framework</u> </P>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <p>Total <b>0</b> Scripts ran in 0.01 seconds <br>
+        <h5> Script Summary </h5>
+        <table class="table table-sm table-bordered summarytable">  
+          <tbody>
+            <tr>
+             
+              
+              <td class="mx-auto">
+              
+              <div class="mx-auto" >TOTAL<br> 0</div>
+              
+              </td>
+              
+              
+            </tr>
+            </tbody>
+          </table>
+        <h5> Test Steps Summary </h5>
+         <table class="table summarytable table-bordered">  
+          <tbody>
+            <tr>
+     
+          
+          
+          <td>
+          
+          FAILED_STEPS_COUNT <br> 0
+          
+          </td>
+          
+          <td>
+          
+          PASSED_STEPS_COUNT <br> 0
+          
+          </td>
+          
+          <td>
+          
+          ERROR_COUNT <br>0
+          
+          </td>
+          
+          <td>
+          
+          TOTAL<br> 0    
+          
+          </td>
+          
+          
+          </tr>
+            </tbody>
+          </table>
+      </div>
+      <div  class="col-6" id="piechart" ></div>
+    </div>
+    
+ <div class="row">
+ <div class="col-md">
+    
+    <p> <span class="badge badge-pill badge-info">Script Path: </span> C:\Users\kbasavarajap\PycharmProjects\PACE_test
+    </div></div>
+      
+      <div class="row">
+        <div class="col-md">
+          <h4>Results</h4>
+          <table id="example" class="display table resulttable" style="width:100%">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Result</th>
+                <th>Test case ID</th>
+                <th style="width:50%"> Title</th>
+                <th>Duration</th>
+                <th>TestStep Count</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          
+          <h4>Environment</h4>
+          <table class="table table-hover table-sm table-responsive-sm">
+            <tbody>
+              
+              <tr>
+                <td>Python</td>
+                <td>3.7.2</td>
+              </tr>
+              
+              <tr>
+                <td>Platform</td>
+                <td>Windows-10-10.0.18362-SP0</td>
+              </tr>
+              
+              <tr>
+                <td>Packages</td>
+                <td>{'pytest': '5.4.3', 'py': '1.8.1', 'pluggy': '0.13.1'}</td>
+              </tr>
+              
+              <tr>
+                <td>Plugins</td>
+                <td>{'pace': '1.16.15-06-2020', 'metadata': '1.9.0', 'sugar': '0.9.3'}</td>
+              </tr>
+              
+            </tbody>
+          </table>
+          
+        </div>
+      </div>
+      <script>
+        $(document).ready(function () {
+          var table = $('#example').DataTable({
+            "paging": true,
+            "ordering": true,
+            "info": false,
+            "processing": true,
+            select: "single",
+            data: [] ,
+            "columns": [{
+                "className": 'details-control',
+                "orderable": false,
+                "data": null,
+                "defaultContent": '',
+                "render": function () {
+                  return '<i class="fa fa-plus-square" aria-hidden="true"></i>';
+                },
+                width: "15px"
+              },
+              {
+                "data": "Result"
+              },
+              {
+                "data": "Test"
+              },
+              {
+                "data": "Title"
+              },
+              {
+                "data": "Duration"
+              },
+              {
+                "data": "TestStepsCount"
+              }
+            ],
+            "order": [
+              [1, 'asc']
+            ]
+          });
+
+
+          // Add event listener for opening and closing details
+          $('#example tbody').on('click', 'td.details-control', function () {
+            var tr = $(this).closest('tr');
+            var tdi = tr.find("i.fa");
+            var row = table.row(tr);
+
+            if (row.child.isShown()) {
+              // This row is already open - close it
+              row.child.hide();
+			  destroyChild(row);
+              tr.removeClass('shown');			  
+              tdi.first().removeClass('fa-minus-square');
+              tdi.first().addClass('fa-plus-square');
+            } else {
+              // Open this row
+              //row.child(format(row.data())).show();
+			  createChild(row,format(row.data()));
+              tr.addClass('shown');
+              tdi.first().removeClass('fa-plus-square');
+              tdi.first().addClass('fa-minus-square');
+            }
+          });
+
+          table.on("user-select", function (e, dt, type, cell, originalEvent) {
+            if ($(cell.node()).hasClass("details-control")) {
+              e.preventDefault();
+            }
+          });
+        });
+
+        function format(d) {
+
+          // `d` is the original data object for the row
+          return d.Extralog;
+        }
+		function createChild(row,d) {
+		
+			var rowData = row.data();
+
+			// This is the table we'll convert into a DataTable
+			var table = $('<table class="display" width="95%"/>');
+
+			// Display it the child row
+			row.child(table).show();
+
+
+			// Child row DataTable configuration, always passes the parent row's id to server
+			var usersTable = table.DataTable({
+				"lengthMenu": [10, 25, 50, 100,500,1000],
+				filter: true,		
+				data:d,
+				columns: [
+					{ title: "id", data: "id" },
+					{ title: "ScriptLog", data: "scriptlog" }						
+				],
+				"columnDefs": [
+				{ "width": "5%", "targets": 0 }],
+				select: true,		
+			});
+
+			// On change, update the content of the parent table's host row
+			// This isn't particularly efficient as it requires the child row
+			// to be regenerated once the main table has been reloaded. A
+			// better method would be to query the data for the new user counts
+			// and update each existing row, but that is beyond the scope of
+			// this post.
+			/*usersEditor.on( 'submitSuccess', function (e, json, data, action) {
+				row.ajax.reload(function () {
+					$(row.cell( row.id(true), 0 ).node()).click();
+				});
+			} );*/
+		}
+	
+		function destroyChild(row) {
+			// Remove and destroy the DataTable in the child row
+			var table = $("table", row.child());
+			table.detach();
+			table.DataTable().destroy();
+
+			// And then hide the row
+			row.child.hide();
+		}
+
+      </script>
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Result');
+        data.addColumn('number', 'Percentage');
+        data.addRows([
+                 
+                  
+                  
+                ]);       
+   
+        data.sort([{column: 1, desc: true}]);
+        var colors = {
+            'passed': 'green',
+            'failed': 'red',
+            'xfailed': '#a8232e',
+            'xpassed': '#32aa0d',
+            'error' : '#960000',
+            'skipped' : '#ffff00',
+          };
+        var slices = [];
+        for (var i = 0; i < data.getNumberOfRows(); i++) {
+          slices.push({
+            color: colors[data.getValue(i, 0)]
+          });
+        }
+
+      var options = {
+        hAxis: {title: 'Year', titleTextStyle: {color: 'red'}},
+        pieSliceText: 'label',
+        pieStartAngle: 100,
+        
+      };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+        chart.draw(data,{slices: slices}, options);
+      }
+    </script>
+</body>
+
+</html>

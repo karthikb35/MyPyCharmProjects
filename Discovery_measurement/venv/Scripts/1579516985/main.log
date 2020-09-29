@@ -1,0 +1,276 @@
+2020-01-20 16:13:05,023 - __main__ - INFO - config file found
+2020-01-20 16:13:05,026 - __main__ - INFO - Successfully read config data
+2020-01-20 16:13:05,027 - __main__ - INFO - Shutting down DNA
+2020-01-20 16:15:13,949 - __main__ - INFO - 2020-01-20 16:15:13.949953
+2020-01-20 16:16:14,425 - __main__ - INFO - Warm Starting DNA
+2020-01-20 16:26:37,974 - __main__ - INFO - Stopping Elasticsearch.
+Stopping Logstash.
+Stopping Nginx.
+
+
+Process :   Elasticsearch Server          [Stopped]
+
+
+DNA Server Shutdown successful...
+
+++++++++++++ Infinera DNA Component Version ++++++++++++
+
+   EMS Server Version: EMS_20.1.0 Build#: M20.1.0.1135
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+No duplicate entries in ems.conf
+Verifying ems.conf for DNA server
+WARNING:There are some warnings while verifying  ems.conf...
+Verifying ORACLE parameters ...
+2020-01-20 10:48:11,207 DB Server IP is : 10.220.5.169
+2020-01-20 10:48:11,387 DBProperties : DB Server URL is : jdbc:oracle:thin:@10.220.5.169:1521/emsdb
+2020-01-20 10:48:11,387 DBProperties : DB Driver Name is : oracle.jdbc.OracleDriver
+2020-01-20 10:48:11,770 DB Server IP is : 10.220.5.169
+2020-01-20 10:48:11,770 Formatted IP  : 10.220.5.169
+2020-01-20 10:48:11,770 OracleDBVerifier : DB Server URL is : jdbc:oracle:thin:@10.220.5.169:1521/emsdb
+2020-01-20 10:48:12,664 Oracle version has been gotten
+2020-01-20 10:48:12,744 Oracle DB CHARACTERSET information has been gotten
+2020-01-20 10:48:13,199 Database Health Checker : There are no DB Structure Integrity Issues Found.
+WARNING:There are some warnings while verifying ORACLE parameter
+Verification reports are stored in /u01/LNWDNA20.0/DNA/EMS/verify_output/VerificationReport.out
+2020-01-20 10:48:14,033 multihome IP = 10.220.5.169
+2020-01-20 10:48:14,155 Uncompressed Address : 10.220.5.169
+2020-01-20 10:48:14,155 Compressed Address : 10.220.5.169
+2020-01-20 10:48:14,165 DB Server IP is : 10.220.5.169
+2020-01-20 10:48:14,167 DBProperties : DB Server URL is : jdbc:oracle:thin:@10.220.5.169:1521/emsdb
+2020-01-20 10:48:14,167 DBProperties : DB Driver Name is : oracle.jdbc.OracleDriver
+2020-01-20 10:48:14,549 No. of CPU(s) : 24
+2020-01-20 10:48:14,549 Deep Discovery Min Threads: 30
+2020-01-20 10:48:14,549 Deep Discovery Max Threads: 32
+2020-01-20 10:48:14,572 SSL is ENABLED , set CLIENT_SERVER to SSL
+2020-01-20 10:48:15,628 No. of CPU(s) : 24
+2020-01-20 10:48:15,628 Deep Discovery Min Threads: 30
+2020-01-20 10:48:15,628 Deep Discovery Max Threads: 32
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/u01/LNWDNA20.0/DNA/EMS/classes/external/server/slf4j-log4j12-1.6.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/u01/LNWDNA20.0/DNA/EMS/classes/external/common/activemq.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+log4j:WARN No such property [maxHistory] in org.apache.log4j.RollingFileAppender.
+log4j:WARN No such property [maxHistory] in org.apache.log4j.RollingFileAppender.
+log4j:WARN No such property [maxHistory] in org.apache.log4j.RollingFileAppender.
+2020-01-20 10:48:19,561 Launching EMS Server in WarmStart Mode
+Jan 20, 2020 10:48:19 AM com.infinera.nm.ems.server.tools.EvaluateCiphers getVulnerableCiphersFromConfFile
+SEVERE: Vulnerable ciphers listed in :/u01/LNWDNA20.0/DNA/EMS//conf/ssl/unsupportedciphers.conf:#DNA supports all the ciphers supported by JRE for communication between DNA server and client.,#But some of those ciphers are vulnerable to attacks. This file lists cipher suites for which the support is removed from DNA because of vulnerability.,,#Following algorithms are vulnerable to SWEET32 attack. More info on this at:https://sweet32.info/,TLS_ECDHE_ECDSA_WITH_3DES_EDE_CBC_SHA,TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA,SSL_RSA_WITH_3DES_EDE_CBC_SHA,TLS_ECDH_ECDSA_WITH_3DES_EDE_CBC_SHA,TLS_ECDH_RSA_WITH_3DES_EDE_CBC_SHA,SSL_DHE_RSA_WITH_3DES_EDE_CBC_SHA,SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA,SSL_RSA_WITH_DES_CBC_SHA,SSL_DHE_RSA_WITH_DES_CBC_SHA,SSL_DHE_DSS_WITH_DES_CBC_SHA,SSL_DH_anon_WITH_DES_CBC_SHA,TLS_KRB5_WITH_3DES_EDE_CBC_SHA,TLS_KRB5_WITH_3DES_EDE_CBC_MD5,TLS_KRB5_WITH_DES_CBC_SHA,TLS_KRB5_WITH_DES_CBC_MD5,TLS_KRB5_EXPORT_WITH_DES_CBC_40_SHA,TLS_KRB5_EXPORT_WITH_DES_CBC_40_SHA,TLS_KRB5_EXPORT_WITH_DES_CBC_40_MD5,TLS_ECDH_anon_WITH_3DES_EDE_CBC_SHA,SSL_DH_anon_WITH_3DES_EDE_CBC_SHA,SSL_RSA_EXPORT_WITH_DES40_CBC_SHA,SSL_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA,SSL_DHE_DSS_EXPORT_WITH_DES40_CBC_SHA,SSL_DH_anon_EXPORT_WITH_DES40_CBC_SHA,TLS_RSA_WITH_NULL_SHA256,TLS_ECDHE_ECDSA_WITH_NULL_SHA,TLS_ECDHE_RSA_WITH_NULL_SHA,SSL_RSA_WITH_NULL_SHA,RSA_NULL_SHA256,TLS_ECDH_RSA_WITH_NULL_SHA,TLS_ECDH_anon_WITH_NULL_SHA,SSL_RSA_WITH_NULL_MD5,TLS_DH_anon_WITH_AES_256_GCM_SHA384,TLS_DH_anon_WITH_AES_128_GCM_SHA256,TLS_DH_anon_WITH_AES_256_CBC_SHA256,TLS_ECDH_anon_WITH_AES_256_CBC_SHA,TLS_DH_anon_WITH_AES_256_CBC_SHA,TLS_DH_anon_WITH_AES_128_CBC_SHA256,TLS_ECDH_anon_WITH_AES_128_CBC_SHA,TLS_DH_anon_WITH_AES_128_CBC_SHA,TLS_DHE_RSA_WITH_AES_256_GCM_SHA384,TLS_DHE_RSA_WITH_AES_256_CBC_SHA256,TLS_DHE_RSA_WITH_AES_256_CBC_SHA,TLS_DHE_RSA_WITH_AES_128_GCM_SHA256,TLS_DHE_RSA_WITH_AES_128_CBC_SHA256,TLS_DHE_RSA_WITH_AES_128_CBC_SHA,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384,TLS_RSA_WITH_AES_128_CBC_SHA,TLS_RSA_WITH_AES_128_CBC_SHA256,TLS_RSA_WITH_AES_256_CBC_SHA,TLS_RSA_WITH_AES_256_CBC_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384,TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384,TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384,TLS_DHE_DSS_WITH_AES_256_CBC_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA,TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA,TLS_ECDH_RSA_WITH_AES_256_CBC_SHA,TLS_DHE_DSS_WITH_AES_256_CBC_SHA,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256,TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256,TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256,TLS_DHE_DSS_WITH_AES_128_CBC_SHA256,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA,TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA,TLS_ECDH_RSA_WITH_AES_128_CBC_SHA,TLS_DHE_DSS_WITH_AES_128_CBC_SHA
+Jan 20, 2020 10:48:19 AM com.infinera.nm.ems.server.tools.EvaluateCiphers filterOutVulnerabeCiphers
+SEVERE: Supported Ciphers:TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384,TLS_DHE_DSS_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256,TLS_DHE_DSS_WITH_AES_128_GCM_SHA256,TLS_EMPTY_RENEGOTIATION_INFO_SCSV
+2020-01-20 10:48:19,642 Web Parameter [IP] : address="10.220.5.169"
+2020-01-20 10:48:19,642 Web Port : 8080
+2020-01-20 10:48:19,713 Starting DNA  in secure mode,set up keystore & truststore
+2020-01-20 10:48:19,714 Initialized ssl keystore & truststore
+2020-01-20 10:48:19,799 No. of CPU(s) : 24
+2020-01-20 10:48:19,800 Deep Discovery Min Threads: 30
+2020-01-20 10:48:19,800 Deep Discovery Max Threads: 32
+2020-01-20 10:48:19,800 No. of CPU(s) : 24
+2020-01-20 10:48:19,801 Deep Discovery Min Threads: 30
+2020-01-20 10:48:19,801 Deep Discovery Max Threads: 32
+2020-01-20 10:48:19,810 SSL is ENABLED , set CLIENT_SERVER to SSL
+2020-01-20 10:48:24,567 Created TRIGGER HTBL_MPLSINTERFA_LOG_DEL_TRG
+2020-01-20 10:48:24,580 Created TRIGGER HTBL_MPLSINTERFA_LOG_INS_TRG
+2020-01-20 10:48:24,598 Created TRIGGER HTBL_SA_LOG_DEL_TRG
+2020-01-20 10:48:24,614 Created TRIGGER HTBL_SA_LOG_INS_TRG
+2020-01-20 10:48:24,630 Created TRIGGER HTBL_LSP_LOG_DEL_TRG
+2020-01-20 10:48:24,641 Created TRIGGER HTBL_LSP_LOG_INS_TRG
+2020-01-20 10:48:24,656 Created TRIGGER HTBL_MA_LOG_DEL_TRG
+2020-01-20 10:48:24,668 Created TRIGGER HTBL_MA_LOG_INS_TRG
+2020-01-20 10:48:24,684 Created TRIGGER HTBL_DBCONTROL_LOG_DEL_TRG
+2020-01-20 10:48:24,695 Created TRIGGER HTBL_DBCONTROL_LOG_INS_TRG
+2020-01-20 10:48:24,710 Created TRIGGER HTBL_SWCONTROL_LOG_DEL_TRG
+2020-01-20 10:48:24,722 Created TRIGGER HTBL_SWCONTROL_LOG_INS_TRG
+2020-01-20 10:48:24,737 Created TRIGGER HTBL_MD_LOG_DEL_TRG
+2020-01-20 10:48:24,751 Created TRIGGER HTBL_MD_LOG_INS_TRG
+2020-01-20 10:48:24,767 Created TRIGGER HTBL_SELECTOR_LOG_DEL_TRG
+2020-01-20 10:48:24,780 Created TRIGGER HTBL_SELECTOR_LOG_INS_TRG
+2020-01-20 10:48:24,798 Created TRIGGER HTBL_FIBERPATCH_LOG_DEL_TRG
+2020-01-20 10:48:24,809 Created TRIGGER HTBL_FIBERPATCH_LOG_INS_TRG
+2020-01-20 10:48:24,827 Created TRIGGER HTBL_LOCALCERTIF_LOG_DEL_TRG
+2020-01-20 10:48:24,840 Created TRIGGER HTBL_LOCALCERTIF_LOG_INS_TRG
+2020-01-20 10:48:24,858 Created TRIGGER HTBL_XFR_LOG_DEL_TRG
+2020-01-20 10:48:24,869 Created TRIGGER HTBL_XFR_LOG_INS_TRG
+2020-01-20 10:48:24,886 Created TRIGGER HTBL_PEERCERTIFI_LOG_DEL_TRG
+2020-01-20 10:48:24,897 Created TRIGGER HTBL_PEERCERTIFI_LOG_INS_TRG
+2020-01-20 10:48:24,914 Created TRIGGER HTBL_IKEPEER_LOG_DEL_TRG
+2020-01-20 10:48:24,925 Created TRIGGER HTBL_IKEPEER_LOG_INS_TRG
+2020-01-20 10:48:24,941 Created TRIGGER Alert_LOG_DEL_TRG
+2020-01-20 10:48:24,951 Created TRIGGER Alert_LOG_INS_TRG
+2020-01-20 10:48:24,965 Created TRIGGER HTBL_EVENT_LOG_DEL_TRG
+2020-01-20 10:48:24,975 Created TRIGGER HTBL_EVENT_LOG_INS_TRG
+2020-01-20 10:48:24,990 Created TRIGGER HTBL_COSMAPPROFI_LOG_DEL_TRG
+2020-01-20 10:48:25,002 Created TRIGGER HTBL_COSMAPPROFI_LOG_INS_TRG
+2020-01-20 10:48:25,018 Created TRIGGER HTBL_VLANASSOCIA_LOG_DEL_TRG
+2020-01-20 10:48:25,030 Created TRIGGER HTBL_VLANASSOCIA_LOG_INS_TRG
+2020-01-20 10:48:25,045 Created TRIGGER HTBL_SECUREENTIT_LOG_DEL_TRG
+2020-01-20 10:48:25,057 Created TRIGGER HTBL_SECUREENTIT_LOG_INS_TRG
+2020-01-20 10:48:25,072 Created TRIGGER HTBL_BWPROFILE_LOG_DEL_TRG
+2020-01-20 10:48:25,083 Created TRIGGER HTBL_BWPROFILE_LOG_INS_TRG
+2020-01-20 10:48:25,107 Created TRIGGER HTBL_AC_LOG_DEL_TRG
+2020-01-20 10:48:25,120 Created TRIGGER HTBL_AC_LOG_INS_TRG
+2020-01-20 10:48:25,146 Created TRIGGER HTBL_ME_LOG_DEL_TRG
+2020-01-20 10:48:25,160 Created TRIGGER HTBL_ME_LOG_INS_TRG
+2020-01-20 10:48:25,181 Created TRIGGER HTBL_MEP_LOG_DEL_TRG
+2020-01-20 10:48:25,192 Created TRIGGER HTBL_MEP_LOG_INS_TRG
+2020-01-20 10:48:25,209 Created TRIGGER HTBL_PW_LOG_DEL_TRG
+2020-01-20 10:48:25,221 Created TRIGGER HTBL_PW_LOG_INS_TRG
+2020-01-20 10:48:25,237 Created TRIGGER HTBL_VSI_LOG_DEL_TRG
+2020-01-20 10:48:25,248 Created TRIGGER HTBL_VSI_LOG_INS_TRG
+2020-01-20 10:48:25,250 Created FUNCTION cnm_is_customer_present_hex
+2020-01-20 10:48:25,277 Created TRIGGER CNM_SYMBOL_trg
+2020-01-20 10:48:25,308 Created TRIGGER cnm_tribptp_trg
+2020-01-20 10:48:25,331 Created TRIGGER cnm_fiberlink_trg
+2020-01-20 10:48:25,351 Created TRIGGER cnm_me_trg
+2020-01-20 10:48:25,377 Created TRIGGER cnm_otsptp_trg
+2020-01-20 10:48:25,404 Created TRIGGER cnm_xcon_trg
+2020-01-20 10:48:25,434 Created TRIGGER cnm_snclocal_trg
+2020-01-20 10:48:25,464 Created TRIGGER cnm_subsnclocal_trg
+2020-01-20 10:48:25,491 Created TRIGGER cnm_association_trg
+2020-01-20 10:48:25,509 Created TRIGGER cnm_alert_trg
+2020-01-20 10:48:25,522 Created TRIGGER cnm_event_trg
+2020-01-20 10:48:25,527 Created TYPE LICENSEENTITYPAGE
+2020-01-20 10:48:25,529 Created TYPE STRING_ARRAY
+2020-01-20 10:48:25,531 Created PROCEDURE getLicensableEntityPage
+2020-01-20 10:48:25,535 Created TYPE EVENTPAGE
+2020-01-20 10:48:25,538 Created TYPE SEVCOUNT
+2020-01-20 10:48:25,540 Created TYPE NUM_ARRAY
+2020-01-20 10:48:25,542 Created PROCEDURE getEventPage
+2020-01-20 10:48:25,544 Created PROCEDURE getEventPageWithoutNodeNumber
+2020-01-20 10:48:25,546 Created PROCEDURE getEventPageSelection
+2020-01-20 10:48:25,550 Created TYPE ALARMPAGE
+2020-01-20 10:48:25,553 Created TYPE ALARMSEVCOUNT
+2020-01-20 10:48:25,555 Created PROCEDURE getAlarmPage
+2020-01-20 10:48:25,558 Created PROCEDURE getAlarmPageWithoutNodeNumber
+2020-01-20 10:48:25,560 Created PROCEDURE getAlarmPageSelection
+2020-01-20 10:48:25,578 Created TRIGGER HTBL_VIRTUALNODE_AD_TRIG
+2020-01-20 10:48:25,597 Created VIEW multinodeAlarmSAP_VW
+2020-01-20 10:48:25,600 Created FUNCTION update_dchctp_used25gslots
+2020-01-20 10:48:25,602 Created FUNCTION free_equipment_count
+2020-01-20 10:48:25,605 Created TYPE trib_tokens_table
+2020-01-20 10:48:25,608 Created FUNCTION get_trib_tokens_null
+2020-01-20 10:48:25,610 Created FUNCTION get_trib_tokens_not_null
+2020-01-20 10:48:25,612 Created FUNCTION get_ATNtrib_tokens_null
+2020-01-20 10:48:25,614 Created FUNCTION get_ATNtrib_tokens_not_null
+2020-01-20 10:48:25,616 Created FUNCTION string_tokenizer
+2020-01-20 10:48:25,644 Created VIEW EVENT_VW
+2020-01-20 10:48:25,667 Created VIEW VW_PUITEMS
+2020-01-20 10:48:25,679 Created VIEW SO_XCON_VW
+2020-01-20 10:48:25,718 Created VIEW moudulation_count_vw
+2020-01-20 10:48:25,725 Created VIEW CHASSIS_TYPE_COUNT
+2020-01-20 10:48:25,740 Created VIEW CLIENT_FRU_COUNT
+2020-01-20 10:48:25,778 Created VIEW INSTALLED_EQUIPMENT_COUNT
+2020-01-20 10:48:25,788 Created VIEW LINE_CARDS_COUNT
+2020-01-20 10:48:25,799 Created VIEW OPTICAL_FRU_COUNT
+2020-01-20 10:48:25,808 Created VIEW TIM_TAM_SIM_FRU_TYPES
+2020-01-20 10:48:25,819 Created VIEW TIM_TAM_SIM_SLOT_DETAILS
+2020-01-20 10:48:25,830 Created VIEW OTM_SLOTS_DETAILS
+2020-01-20 10:48:25,839 Created VIEW DLM_SLOT_DETAILS
+2020-01-20 10:48:25,856 Created TRIGGER DELETE_EVENT_TRG
+2020-01-20 10:48:25,859 Created FUNCTION INSERT_FACILITIESCLR
+2020-01-20 10:48:25,879 Created TRIGGER HTBL_XCONCLR_AI_TRG
+2020-01-20 10:48:25,881 Created FUNCTION BULK_INSERT_FACILITIESCLR
+2020-01-20 10:48:25,883 Created FUNCTION INSERT_OFACILITIESCLR
+2020-01-20 10:48:25,901 Created TRIGGER HTBL_OXCONCLR_AI_TRG
+2020-01-20 10:48:25,904 Created FUNCTION BULK_INSERT_OFACILITIESCLR
+2020-01-20 10:48:25,927 Created TRIGGER HTBL_VCEP_BI_TRG
+2020-01-20 10:48:25,948 Created TRIGGER HTBL_NMTRANSPORTLIST_BI_TRG
+2020-01-20 10:48:25,951 Created FUNCTION PURGE_EVENTS
+2020-01-20 10:48:25,953 Created FUNCTION PURGE_LOGEVENTS
+2020-01-20 10:48:25,967 Created VIEW LM_INVENTORY
+2020-01-20 10:48:25,976 Created VIEW TIM_SLOT_UTILIZATION_DETAILS
+2020-01-20 10:48:25,987 Created VIEW TAM_SLOT_UTILIZATION_DETAILS
+2020-01-20 10:48:25,996 Created VIEW OTM_SLOT_UTILIZATION_DETAILS
+2020-01-20 10:48:26,016 Created TRIGGER NBM_LMBWTHRESHOLD_UPD_TRG
+2020-01-20 10:48:31,607 Recreating sequences
+2020-01-20 10:48:32,303 MAX ID FROM DB computed=1413945800
+2020-01-20 10:48:32,562 drop sequence INFEMS_SEQ accomplished
+2020-01-20 10:48:32,795 Created sequence INFEMS_SEQ (1413945800)
+2020-01-20 10:48:33,025 drop sequence INFEMSALARM_SEQ accomplished
+2020-01-20 10:48:33,251 Created sequence INFEMSALARM_SEQ (55068)
+2020-01-20 10:48:33,482 drop sequence INFEMSEVENT_SEQ accomplished
+2020-01-20 10:48:33,698 Created sequence INFEMSEVENT_SEQ (1481417)
+2020-01-20 10:48:34,058 Please wait while DNA server creates the table partitions.
+2020-01-20 10:48:34,494 No. of CPU(s) : 24
+2020-01-20 10:48:34,494 Deep Discovery Min Threads: 30
+2020-01-20 10:48:34,494 Deep Discovery Max Threads: 32
+2020-01-20 10:48:34,495 No. of CPU(s) : 24
+2020-01-20 10:48:34,495 Deep Discovery Min Threads: 30
+2020-01-20 10:48:34,495 Deep Discovery Max Threads: 32
+2020-01-20 10:48:34,502 SSL is ENABLED , set CLIENT_SERVER to SSL
+2020-01-20 10:48:34,745 Max Read Write Threads/Max Discovery Threads : 32
+2020-01-20 10:48:34,745 Max Read only Threads/Max MOPP Threads : 20
+2020-01-20 10:48:34,745 Extra Read only Threads in Server BE are 20
+2020-01-20 10:48:34,745 Extra Read Write Threads in Server BE are 20
+2020-01-20 10:48:34,745 Max Read only Locks in Server BE are 40
+2020-01-20 10:48:34,745 Max Read write Locks in Server BE are 52
+2020-01-20 10:48:34,745 Min DB Connection pool size in Server BE is 52
+2020-01-20 10:48:34,745 Max DB Connection pool size in Server BE is 92
+2020-01-20 10:48:34,746 readOnlyTxnsSemaphore Count:40
+2020-01-20 10:48:34,746 readWriteTxnsSemaphore Count:52
+This evaluation copy is valid for 84 days
+
+************** Starting DNA Processes ***************
+
+
+Starting Elasticsearch.
+Starting Nginx.
+Starting Logstash.
+2020-01-20 10:49:22,489 Uncompressed Address : 10.220.5.169
+2020-01-20 10:49:22,492 Compressed Address : 10.220.5.169
+
+
+Process :   Elasticsearch Server          [Started]
+
+Process :   IRMIRunProcess                [Started]
+
+Process :   CnmServerModule               [Started]
+
+Process :   DNACommunicationSetupBE       [Started]
+
+Process :   Network Bandwidth Manager     [Scheduled]
+
+Process :   InfineraMessageProcess        [Started]
+
+Process :   EMSCommunicationSetupFE       [Started]
+
+Process :   SecurityModule                [Started]
+
+Process :   GrooveHistoricPMDataMonitor               [Started]
+
+Process :   Web Server                    [Started]
+
+Process :   Stomp Notification Manager    [Started]
+
+Process :   Elasticsearch Data Sync       [Started]
+
+Process :   Camel Integration Manager     [Started]
+
+Process :   IViewDNAMain                  [Started]
+
+Process :   InfineraSNMPTrapListener      [Started]
+
+Process :   InfineraOSSCommonLoader       [Skipped]
+
+Process :   InfineraCorbaOSSLoader        [Started]
+
+Process :   InfineraXISLoader             [Skipped]
+
+Process :   DBHealthMonitor               [Started]
+
+Process :   ResourceMonitor               [Started]
+
+Process :   CommandLineMessageServer      [Started]
+
+
+
+Infinera DNA Server modules started successfully at 2020-01-20 10:56:37Z
+
+
+Please connect your client to the web server on 10.220.5.169:8443 using Secure HTTP Protocol
+
+
+2020-01-20 16:26:37,975 - __main__ - INFO - 2020-01-20 16:26:37.975701
+2020-01-20 16:26:37,976 - __main__ - INFO - Doing periodic DB queries
+2020-01-20 16:26:37,976 - __main__ - INFO - Latest timestamp = 1579516994710

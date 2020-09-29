@@ -1,0 +1,31 @@
+[RUN]
+PURPOSE=Simple
+DNA_RELEASE=test
+
+[DNA_SERVER]
+DNA_IP=10.220.5.169
+DNA_USER_NAME=dnaadmin
+DNA_USER_PASSWORD=dnaadmin
+DNA_HOME=/u01/LNWDNA20.0/DNA
+
+[DNA_DB]
+# Type of the Database, Valid Values are ORACLE or MARIADB
+DNA_DB_TYPE=ORACLE
+DNA_DB_USERNAME=DNAUser
+DNA_DB_PASSWD=emsdb
+DNA_DB_NAME=emsdb
+DNA_DB_PORT=1521
+
+[PERIODIC_DISCOVERY]
+INTERVAL=30
+#Number of intervals will be TOTAL_DURATION(in mins)/INTERVAL(in seconds)
+TOTAL_DURATION=45
+
+[SQL_SERVER]
+DB_IP=10.220.77.53
+PORT=3306
+DB_USER=lnwmnwDB
+DB_PASSWD=lnm.mnw@db
+DB=lnwmnwDB
+TABLE=node_discovery
+

@@ -1,0 +1,24 @@
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"></head><body>{% extends 'base.html' %}
+
+{% block body %}
+
+<h2>{{ the_title }}</h2>
+
+
+		{% for row_title in the_row_titles %}
+            
+		{% endfor %}
+    
+    {% for log_row in the_data %}
+        
+            {% for item in log_row %}
+                
+            {% endfor %}
+        
+    {% endfor %}
+<table>
+    <tbody><tr><th>{{row_title}}</th></tr><tr><td>{{item}}</td></tr></tbody></table>
+
+{% endblock %}
+</body></html>

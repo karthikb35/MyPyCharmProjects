@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js">
+  </script>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+  <style>
+  table{
+	  margin: 0 auto;
+	  width: 100%;
+	  clear: both;
+	  border-collapse: collapse;
+	  table-layout: fixed; // ***********add this
+	  word-wrap:break-word; // ***********and this
+	}
+		
+    td.details-control {
+      text-align: center;
+      color: forestgreen;
+      cursor: pointer;
+    }
+
+    tr.shown td.details-control {
+      text-align: center;
+      color: forestgreen;
+    }
+
+    pre {
+       outline: 1px solid #ccc; 
+    padding: 5px; 
+    margin: 5px; 
+    white-space: pre-wrap;       
+    white-space: -moz-pre-wrap;  
+    white-space: -pre-wrap;      
+    white-space: -o-pre-wrap;    
+    word-wrap: break-word;   
+    
+    }
+    
+    table.resulttable {
+        table-layout: fixed;
+        word-wrap: break-word;
+    }    
+    table.summarytable td {
+   text-align: center;  
+}
+    
+}
+  </style>
+  <title>Infinera PACE Automation Report</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md">
+        <p><u> Report Generated On <b>07-July-2020  at 15:10</b> By Infinera PACE Automation Framework</u> </P>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <p>Total <b>1</b> Scripts ran in 9099.23 seconds <br>
+        <h5> Script Summary </h5>
+        <table class="table table-sm table-bordered summarytable">  
+          <tbody>
+            <tr>
+             
+              
+              <td class="mx-auto">
+              
+              FAILED <br> 1
+              
+              </td>
+              
+              <td class="mx-auto">
+              
+              <div class="mx-auto" >TOTAL<br> 1</div>
+              
+              </td>
+              
+              
+            </tr>
+            </tbody>
+          </table>
+        <h5> Test Steps Summary </h5>
+         <table class="table summarytable table-bordered">  
+          <tbody>
+            <tr>
+     
+          
+          
+          <td>
+          
+          FAILED_STEPS_COUNT <br> 1
+          
+          </td>
+          
+          <td>
+          
+          PASSED_STEPS_COUNT <br> 14
+          
+          </td>
+          
+          <td>
+          
+          ERROR_COUNT <br>0
+          
+          </td>
+          
+          <td>
+          
+          TOTAL<br> 15    
+          
+          </td>
+          
+          
+          </tr>
+            </tbody>
+          </table>
+      </div>
+      <div  class="col-6" id="piechart" ></div>
+    </div>
+    
+ <div class="row">
+ <div class="col-md">
+    
+    <p> <span class="badge badge-pill badge-info">Script Path: </span> root
+    </div></div>
+      
+      <div class="row">
+        <div class="col-md">
+          <h4>Results</h4>
+          <table id="example" class="display table resulttable" style="width:100%">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Result</th>
+                <th>Test case ID</th>
+                <th style="width:50%"> Title</th>
+                <th>Duration</th>
+                <th>TestStep Count</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          
+          <h4>Environment</h4>
+          <table class="table table-hover table-sm table-responsive-sm">
+            <tbody>
+              
+              <tr>
+                <td>Python</td>
+                <td>3.7.2</td>
+              </tr>
+              
+              <tr>
+                <td>Platform</td>
+                <td>Windows-10-10.0.18362-SP0</td>
+              </tr>
+              
+              <tr>
+                <td>Packages</td>
+                <td>{'pytest': '5.4.3', 'py': '1.8.1', 'pluggy': '0.13.1'}</td>
+              </tr>
+              
+              <tr>
+                <td>Plugins</td>
+                <td>{'pace': '1.16.15-06-2020', 'metadata': '1.9.0', 'sugar': '0.9.3'}</td>
+              </tr>
+              
+              <tr>
+                <td>Feature</td>
+                <td>Infinera</td>
+              </tr>
+              
+            </tbody>
+          </table>
+          
+        </div>
+      </div>
+      <script>
+        $(document).ready(function () {
+          var table = $('#example').DataTable({
+            "paging": true,
+            "ordering": true,
+            "info": false,
+            "processing": true,
+            select: "single",
+            data: [{'Test': 'THANOS-6429', 'Title': 'Sanity: SW build Download and Fresh Installation ', 'Result': '<span class ="badge badge-danger">Failed</span>', 'Duration': 8175.07, 'Extralog': [{'id': 1, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.utility.environment_cleanup</b>: 25:<pre class="text-justify"><xmp>Executing auto environment cleanup for Input...</xmp></pre>'}, {'id': 2, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>root</b>: 473:<pre class="text-justify"><xmp>Initial auto environment cleanup wasn\'t executed as module \'pacelib.Fixtures.ThanOS_Env_Fixtures\' has no attribute \'Input\'\nContinuing execution...</xmp></pre>'}, {'id': 3, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.utility.parser</b>: 185:<pre class="text-justify"><xmp>System reachable in first attempt..!!</xmp></pre>'}, {'id': 4, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 56:<pre class="text-justify"><xmp>Connected successfully to \'10.220.160.28\' via SSH</xmp></pre>'}, {'id': 5, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 114:<pre class="text-justify"><xmp>Entered: cd /home/karthik/LatestBuildFromArtifactory</xmp></pre>'}, {'id': 6, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 132:<pre class="text-justify"><xmp>After Removing ANSIescapeSquence=Linux in-160sim28 4.19.0-8-amd64 #1 SMP Debian 4.19.98-1 (2020-01-26) x86_64\r\n\r\nThe programs included with the Debian GNU/Linux system are free software;\r\nthe exact distribution terms for each program are described in the\r\nindividual files in /usr/share/doc/*/copyright.\r\n\r\nDebian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent\r\npermitted by applicable law.\r\nLast login: Tue Jul  7 12:39:33 2020 from 10.220.118.160\r\r\ncd /home/karthik/LatestBuildFromArtifactory\r\nkarthik@in-160sim28:~$ cd /home/karthik/LatestBuildFromArtifactory\r\nkarthik@in-160sim28:~/LatestBuildFromArtifactory$ </xmp></pre>'}, {'id': 7, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 114:<pre class="text-justify"><xmp>Entered: rm -rf *</xmp></pre>'}, {'id': 8, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 132:<pre class="text-justify"><xmp>After Removing ANSIescapeSquence=rm -rf *\r\nkarthik@in-160sim28:~/LatestBuildFromArtifactory$ </xmp></pre>'}, {'id': 9, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 114:<pre class="text-justify"><xmp>Entered: wget --no-verbose --no-parent --recursive --level=1 --no-directories --user=anonymous --password=anonymous https://iartifactory.infinera.com/artifactory/thanos/chassisx-nightly/chassisx-645/sim/</xmp></pre>'}, {'id': 10, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 132:<pre class="text-justify"><xmp>After Removing ANSIescapeSquence=wget --no-verbose --no-parent --recursive --level=1 --no-directories --user=anonymous --password=anonymous https://iartifactory.infinera.com/artifactory/thanos/chassisx-nightly/chassisx-645/sim/\r\n</xmp></pre>'}, {'id': 11, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 56:<pre class="text-justify"><xmp>Connected successfully to \'10.220.160.28\' via SSH</xmp></pre>'}, {'id': 12, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 114:<pre class="text-justify"><xmp>Entered: cd /home/karthik/LatestBuildFromArtifactory</xmp></pre>'}, {'id': 13, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 132:<pre class="text-justify"><xmp>After Removing ANSIescapeSquence=Linux in-160sim28 4.19.0-8-amd64 #1 SMP Debian 4.19.98-1 (2020-01-26) x86_64\r\n\r\nThe programs included with the Debian GNU/Linux system are free software;\r\nthe exact distribution terms for each program are described in the\r\nindividual files in /usr/share/doc/*/copyright.\r\n\r\nDebian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent\r\npermitted by applicable law.\r\nLast login: Tue Jul  7 12:54:10 2020 from 10.220.118.160\r\r\ncd /home/karthik/LatestBuildFromArtifactory\r\nkarthik@in-160sim28:~$ cd /home/karthik/LatestBuildFromArtifactory\r\nkarthik@in-160sim28:~/LatestBuildFromArtifactory$ </xmp></pre>'}, {'id': 14, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 114:<pre class="text-justify"><xmp>Entered: ls -lrt</xmp></pre>'}, {'id': 15, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 132:<pre class="text-justify"><xmp>After Removing ANSIescapeSquence=ls -lrt\r\ntotal 2385128\r\n-rw-r--r-- 1 karthik karthik  769885472 Jul  7 05:20 th-xmm4-sim-2020-07-06-nightly-R1.0.0.645.bin\r\n-rw-r--r-- 1 karthik karthik  405024032 Jul  7 05:20 th-chm6-sim-2020-07-06-nightly-R1.0.0.645.bin\r\n-rw-r--r-- 1 karthik karthik 1172745975 Jul  7 05:21 ThanOS-F1.0-Main-nightly-2020.07.06_23_10.tar.gz\r\n-rw-r--r-- 1 karthik karthik        380 Jul  7 05:21 ThanOS-F1.0-Main-nightly-2020.07.06_23_10.manifest\r\n-rw-r--r-- 1 karthik karthik   94687288 Jul  7 05:21 chm6_thanos_sim_x86_64_pkg_tar.gz\r\n-rw-r--r-- 1 karthik karthik       1162 Jul  7 12:54 index.html\r\nkarthik@in-160sim28:~/LatestBuildFromArtifactory$ </xmp></pre>'}, {'id': 16, 'scriptlog': '<span class="badge badge-success">PASSED</span>: <b>TestStepVerification</b>: 308: <br><b>sut = \'ThanOSServer_1\' &nbsp;&nbsp;cmd = \'ls -lrt\' &nbsp;&nbsp;verification = {Contains: [\'manifest\', \'tar.gz\']}</b>:<pre class="text-justify"><xmp>Test Step Passed at ..\\..\\..\\python\\python37\\lib\\site-packages\\pace\\neapi\\operations.py 1463 in NE_SSH(),  Message: pytest.evaluate(result)\n\nVariables: \nsut = \'ThanOSServer_1\'\ncmd = \'ls -lrt\'\ntoVerify = {<Output.CONTAINS: \'CONTAINS\'>: [\'manifest\', \'tar.gz\']}\nmodifyOutput = {}\nappId = \'parse\'\nwaitTime = 2\nretries = 0\nprompt = None\ninterface = \'NE_SSH\'\nsessionId = \'ThanOSServer_1_OBJ_NE_SSH_parse\'\noutputResp = \'ls -lrt\\r\\ntotal 2385128\\r\\n-rw-r--r-- 1 karthik karthik  769885472 Jul  7 05:20 th-xmm4-sim-2020-07-06-nightly-R1.0....n-rw-r--r-- 1 karthik karthik       1162 Jul  7 12:54 index.html\\r\\nkarthik@in-160sim28:~/LatestBuildFromArtifactory$ \'\nresult = True</xmp></pre>'}, {'id': 17, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.neapi.operations</b>: 363:<pre class="text-justify"><xmp>Done downloading build to Sim server.</xmp></pre>'}, {'id': 18, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.neapi.operations</b>: 111:<pre class="text-justify"><xmp>Done downloading build to Sim server</xmp></pre>'}, {'id': 19, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.cli</b>: 56:<pre class="text-justify"><xmp>Connected successfully to \'172.16.11.196\' via SSH</xmp></pre>'}, {'id': 20, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.cli</b>: 34:<pre class="text-justify"><xmp>Received:Connecting user root from 10.220.118.160:52792\r\n****************************************** Warning ******************************************\r\r\n\r\r\nThis system is restricted to authorized users for business purposes. Unauthorized access is a\r\r\nviolation of the law. This service may be monitored for administrative and security reasons.\r\r\nBy proceeding, you consent to this monitoring.\r\r\n\r\r\n*********************************************************************************************\r\r\n\r\r\n\r\r\n[ ne ]\r\r\nroot@THANOS> </xmp></pre>'}, {'id': 21, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.cli</b>: 49:<pre class="text-justify"><xmp>Logged in successfully to CLI</xmp></pre>'}, {'id': 22, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.cli</b>: 67:<pre class="text-justify"><xmp>Entered: download swimage source=sftp://karthik@10.220.160.28:/home/karthik/LatestBuildFromArtifactory/ThanOS-F1.0-Main-nightly-2020.07.06_23_10.manifest password=Hello123</xmp></pre>'}, {'id': 23, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.cli</b>: 98:<pre class="text-justify"><xmp>CLi responde Received: download swimage source=sftp://karthik@10.220.160.28:/home/karthik/LatestBuildFromArtifactory/ThanOS-F1.0-Main-nightly-2020.07.06_23_10.manifest password=Hello123\r\r\nDownloading : ThanOS-F1.0-Main-nightly-2020.07.06_23_10.manifest...\r\r\n\x08\x08\x08\x08\x0810%]\r\r\n\x08\x08\x08\x08\x0820%]\r\r\n\x08\x08\x08\x08\x0830%]\r\r\n\x08\x08\x08\x08\x0840%]\r\r\n\x08\x08\x08\x08\x0850%]\r\r\n\x08\x08\x08\x08\x0860%]\r\r\n\x08\x08\x08\x08\x0870%]\r\r\n\x08\x08\x08\x08\x0880%]\r\r\n\x08\x08\x08\x08\x0890%]\r\r\nDownloaded : ThanOS-F1.0-Main-nightly-2020.07.06_23_10.manifest\r\r\nDownloading : ThanOS-F1.0-Main-nightly-2020.07.06_23_10.tar.gz...\r\r\n\x08\x08\x08\x08\x081%]\r\r\n\x08\x08\x08\x08\x082%]\r\r\n\x08\x08\x08\x08\x083%]\r\r\n\x08\x08\x08\x08\x084%]\r\r\n\x08\x08\x08\x08\x085%]\r\r\n\x08\x08\x08\x08\x086%]\r\r\n\x08\x08\x08\x08\x087%]\r\r\n\x08\x08\x08\x08\x088%]\r\r\n\x08\x08\x08\x08\x089%]\r\r\n\x08\x08\x08\x08\x0810%]\r\r\n\x08\x08\x08\x08\x0811%]\r\r\n\x08\x08\x08\x08\x0812%]\r\r\n\x08\x08\x08\x08\x0813%]\r\r\n\x08\x08\x08\x08\x0814%]\r\r\n\x08\x08\x08\x08\x0815%]\r\r\n\x08\x08\x08\x08\x0816%]\r\r\n\x08\x08\x08\x08\x0817%]\r\r\n\x08\x08\x08\x08\x0818%]\r\r\n\x08\x08\x08\x08\x0819%]\r\r\n\x08\x08\x08\x08\x0820%]\r\r\n\x08\x08\x08\x08\x0821%]\r\r\n\x08\x08\x08\x08\x0822%]\r\r\n\x08\x08\x08\x08\x0823%]\r\r\n\x08\x08\x08\x08\x0824%]\r\r\n\x08\x08\x08\x08\x0825%]\r\r\n\x08\x08\x08\x08\x0826%]\r\r\n\x08\x08\x08\x08\x0827%]\r\r\n\x08\x08\x08\x08\x0828%]\r\r\n\x08\x08\x08\x08\x0829%]\r\r\n\x08\x08\x08\x08\x0830%]\r\r\n\x08\x08\x08\x08\x0831%]\r\r\n\x08\x08\x08\x08\x0832%]\r\r\n\x08\x08\x08\x08\x0833%]\r\r\n\x08\x08\x08\x08\x0834%]\r\r\n\x08\x08\x08\x08\x0835%]\r\r\n\x08\x08\x08\x08\x0836%]\r\r\n\x08\x08\x08\x08\x0837%]\r\r\n\x08\x08\x08\x08\x0838%]\r\r\n\x08\x08\x08\x08\x0839%]\r\r\n\x08\x08\x08\x08\x0840%]\r\r\n\x08\x08\x08\x08\x0841%]\r\r\n\x08\x08\x08\x08\x0842%]\r\r\n\x08\x08\x08\x08\x0843%]\r\r\n\x08\x08\x08\x08\x0844%]\r\r\n\x08\x08\x08\x08\x0845%]\r\r\n\x08\x08\x08\x08\x0846%]\r\r\n\x08\x08\x08\x08\x0847%]\r\r\n\x08\x08\x08\x08\x0848%]\r\r\n\x08\x08\x08\x08\x0849%]\r\r\n\x08\x08\x08\x08\x0850%]\r\r\n\x08\x08\x08\x08\x0851%]\r\r\n\x08\x08\x08\x08\x0852%]\r\r\n\x08\x08\x08\x08\x0853%]\r\r\n\x08\x08\x08\x08\x0854%]\r\r\n\x08\x08\x08\x08\x0855%]\r\r\n\x08\x08\x08\x08\x0856%]\r\r\n\x08\x08\x08\x08\x0857%]\r\r\n\x08\x08\x08\x08\x0858%]\r\r\n\x08\x08\x08\x08\x0859%]\r\r\n\x08\x08\x08\x08\x0860%]\r\r\n\x08\x08\x08\x08\x0861%]\r\r\n\x08\x08\x08\x08\x0862%]\r\r\n\x08\x08\x08\x08\x0863%]\r\r\n\x08\x08\x08\x08\x0864%]\r\r\n\x08\x08\x08\x08\x0865%]\r\r\n\x08\x08\x08\x08\x0866%]\r\r\n\x08\x08\x08\x08\x0867%]\r\r\n\x08\x08\x08\x08\x0868%]\r\r\n\x08\x08\x08\x08\x0869%]\r\r\n\x08\x08\x08\x08\x0870%]\r\r\n\x08\x08\x08\x08\x0871%]\r\r\n\x08\x08\x08\x08\x0872%]\r\r\n\x08\x08\x08\x08\x0873%]\r\r\n\x08\x08\x08\x08\x0874%]\r\r\n\x08\x08\x08\x08\x0875%]\r\r\n\x08\x08\x08\x08\x0876%]\r\r\n\x08\x08\x08\x08\x0877%]\r\r\n\x08\x08\x08\x08\x0878%]\r\r\n\x08\x08\x08\x08\x0879%]\r\r\n\x08\x08\x08\x08\x0880%]\r\r\n\x08\x08\x08\x08\x0881%]\r\r\n\x08\x08\x08\x08\x0882%]\r\r\n\x08\x08\x08\x08\x0883%]\r\r\n\x08\x08\x08\x08\x0884%]\r\r\n\x08\x08\x08\x08\x0885%]\r\r\n\x08\x08\x08\x08\x0886%]\r\r\n\x08\x08\x08\x08\x0887%]\r\r\n\x08\x08\x08\x08\x0888%]\r\r\n\x08\x08\x08\x08\x0889%]\r\r\n\x08\x08\x08\x08\x0890%]\r\r\n\x08\x08\x08\x08\x0891%]\r\r\n\x08\x08\x08\x08\x0892%]\r\r\n\x08\x08\x08\x08\x0893%]\r\r\n\x08\x08\x08\x08\x0894%]\r\r\n\x08\x08\x08\x08\x0895%]\r\r\n\x08\x08\x08\x08\x0896%]\r\r\n\x08\x08\x08\x08\x0897%]\r\r\n\x08\x08\x08\x08\x0898%]\r\r\n\x08\x08\x08\x08\x0899%]\r\r\n\x08\x08\x08\x08\x08100%]\r\r\n\x1b[1A\x1b[2Kroot@THANOS> download swimage source=sftp://karthik@10.220.160.28:/home/karthik/LatestBuildFromArtifactory/ThanOS-F1.0-Main-nightly-2020.07.06_23_10.manifest password=***\r\r\nDownload complete\r\r\n[ ne ]\r\r\nroot@THANOS> </xmp></pre>'}, {'id': 24, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.cli</b>: 100:<pre class="text-justify"><xmp>After Removing ANSIescapeSquence=download swimage source=sftp://karthik@10.220.160.28:/home/karthik/LatestBuildFromArtifactory/ThanOS-F1.0-Main-nightly-2020.07.06_23_10.manifest password=Hello123\r\r\nDownloading : ThanOS-F1.0-Main-nightly-2020.07.06_23_10.manifest...\r\r\n\x08\x08\x08\x08\x0810%]\r\r\n\x08\x08\x08\x08\x0820%]\r\r\n\x08\x08\x08\x08\x0830%]\r\r\n\x08\x08\x08\x08\x0840%]\r\r\n\x08\x08\x08\x08\x0850%]\r\r\n\x08\x08\x08\x08\x0860%]\r\r\n\x08\x08\x08\x08\x0870%]\r\r\n\x08\x08\x08\x08\x0880%]\r\r\n\x08\x08\x08\x08\x0890%]\r\r\nDownloaded : ThanOS-F1.0-Main-nightly-2020.07.06_23_10.manifest\r\r\nDownloading : ThanOS-F1.0-Main-nightly-2020.07.06_23_10.tar.gz...\r\r\n\x08\x08\x08\x08\x081%]\r\r\n\x08\x08\x08\x08\x082%]\r\r\n\x08\x08\x08\x08\x083%]\r\r\n\x08\x08\x08\x08\x084%]\r\r\n\x08\x08\x08\x08\x085%]\r\r\n\x08\x08\x08\x08\x086%]\r\r\n\x08\x08\x08\x08\x087%]\r\r\n\x08\x08\x08\x08\x088%]\r\r\n\x08\x08\x08\x08\x089%]\r\r\n\x08\x08\x08\x08\x0810%]\r\r\n\x08\x08\x08\x08\x0811%]\r\r\n\x08\x08\x08\x08\x0812%]\r\r\n\x08\x08\x08\x08\x0813%]\r\r\n\x08\x08\x08\x08\x0814%]\r\r\n\x08\x08\x08\x08\x0815%]\r\r\n\x08\x08\x08\x08\x0816%]\r\r\n\x08\x08\x08\x08\x0817%]\r\r\n\x08\x08\x08\x08\x0818%]\r\r\n\x08\x08\x08\x08\x0819%]\r\r\n\x08\x08\x08\x08\x0820%]\r\r\n\x08\x08\x08\x08\x0821%]\r\r\n\x08\x08\x08\x08\x0822%]\r\r\n\x08\x08\x08\x08\x0823%]\r\r\n\x08\x08\x08\x08\x0824%]\r\r\n\x08\x08\x08\x08\x0825%]\r\r\n\x08\x08\x08\x08\x0826%]\r\r\n\x08\x08\x08\x08\x0827%]\r\r\n\x08\x08\x08\x08\x0828%]\r\r\n\x08\x08\x08\x08\x0829%]\r\r\n\x08\x08\x08\x08\x0830%]\r\r\n\x08\x08\x08\x08\x0831%]\r\r\n\x08\x08\x08\x08\x0832%]\r\r\n\x08\x08\x08\x08\x0833%]\r\r\n\x08\x08\x08\x08\x0834%]\r\r\n\x08\x08\x08\x08\x0835%]\r\r\n\x08\x08\x08\x08\x0836%]\r\r\n\x08\x08\x08\x08\x0837%]\r\r\n\x08\x08\x08\x08\x0838%]\r\r\n\x08\x08\x08\x08\x0839%]\r\r\n\x08\x08\x08\x08\x0840%]\r\r\n\x08\x08\x08\x08\x0841%]\r\r\n\x08\x08\x08\x08\x0842%]\r\r\n\x08\x08\x08\x08\x0843%]\r\r\n\x08\x08\x08\x08\x0844%]\r\r\n\x08\x08\x08\x08\x0845%]\r\r\n\x08\x08\x08\x08\x0846%]\r\r\n\x08\x08\x08\x08\x0847%]\r\r\n\x08\x08\x08\x08\x0848%]\r\r\n\x08\x08\x08\x08\x0849%]\r\r\n\x08\x08\x08\x08\x0850%]\r\r\n\x08\x08\x08\x08\x0851%]\r\r\n\x08\x08\x08\x08\x0852%]\r\r\n\x08\x08\x08\x08\x0853%]\r\r\n\x08\x08\x08\x08\x0854%]\r\r\n\x08\x08\x08\x08\x0855%]\r\r\n\x08\x08\x08\x08\x0856%]\r\r\n\x08\x08\x08\x08\x0857%]\r\r\n\x08\x08\x08\x08\x0858%]\r\r\n\x08\x08\x08\x08\x0859%]\r\r\n\x08\x08\x08\x08\x0860%]\r\r\n\x08\x08\x08\x08\x0861%]\r\r\n\x08\x08\x08\x08\x0862%]\r\r\n\x08\x08\x08\x08\x0863%]\r\r\n\x08\x08\x08\x08\x0864%]\r\r\n\x08\x08\x08\x08\x0865%]\r\r\n\x08\x08\x08\x08\x0866%]\r\r\n\x08\x08\x08\x08\x0867%]\r\r\n\x08\x08\x08\x08\x0868%]\r\r\n\x08\x08\x08\x08\x0869%]\r\r\n\x08\x08\x08\x08\x0870%]\r\r\n\x08\x08\x08\x08\x0871%]\r\r\n\x08\x08\x08\x08\x0872%]\r\r\n\x08\x08\x08\x08\x0873%]\r\r\n\x08\x08\x08\x08\x0874%]\r\r\n\x08\x08\x08\x08\x0875%]\r\r\n\x08\x08\x08\x08\x0876%]\r\r\n\x08\x08\x08\x08\x0877%]\r\r\n\x08\x08\x08\x08\x0878%]\r\r\n\x08\x08\x08\x08\x0879%]\r\r\n\x08\x08\x08\x08\x0880%]\r\r\n\x08\x08\x08\x08\x0881%]\r\r\n\x08\x08\x08\x08\x0882%]\r\r\n\x08\x08\x08\x08\x0883%]\r\r\n\x08\x08\x08\x08\x0884%]\r\r\n\x08\x08\x08\x08\x0885%]\r\r\n\x08\x08\x08\x08\x0886%]\r\r\n\x08\x08\x08\x08\x0887%]\r\r\n\x08\x08\x08\x08\x0888%]\r\r\n\x08\x08\x08\x08\x0889%]\r\r\n\x08\x08\x08\x08\x0890%]\r\r\n\x08\x08\x08\x08\x0891%]\r\r\n\x08\x08\x08\x08\x0892%]\r\r\n\x08\x08\x08\x08\x0893%]\r\r\n\x08\x08\x08\x08\x0894%]\r\r\n\x08\x08\x08\x08\x0895%]\r\r\n\x08\x08\x08\x08\x0896%]\r\r\n\x08\x08\x08\x08\x0897%]\r\r\n\x08\x08\x08\x08\x0898%]\r\r\n\x08\x08\x08\x08\x0899%]\r\r\n\x08\x08\x08\x08\x08100%]\r\r\nroot@THANOS> download swimage source=sftp://karthik@10.220.160.28:/home/karthik/LatestBuildFromArtifactory/ThanOS-F1.0-Main-nightly-2020.07.06_23_10.manifest password=***\r\r\nDownload complete\r\r\n[ ne ]\r\r\nroot@THANOS> </xmp></pre>'}, {'id': 25, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.cli</b>: 56:<pre class="text-justify"><xmp>Connected successfully to \'172.16.11.196\' via SSH</xmp></pre>'}, {'id': 26, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.cli</b>: 34:<pre class="text-justify"><xmp>Received:Connecting user root from 10.220.118.160:52813\r\n****************************************** Warning ******************************************\r\r\n\r\r\nThis system is restricted to authorized users for business purposes. Unauthorized access is a\r\r\nviolation of the law. This service may be monitored for administrative and security reasons.\r\r\nBy proceeding, you consent to this monitoring.\r\r\n\r\r\n*********************************************************************************************\r\r\n\r\r\nLast login: 2020-07-07T07:26:06Z\r\r\n\r\r\n[ ne ]\r\r\nroot@THANOS> </xmp></pre>'}, {'id': 27, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.cli</b>: 49:<pre class="text-justify"><xmp>Logged in successfully to CLI</xmp></pre>'}, {'id': 28, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.cli</b>: 67:<pre class="text-justify"><xmp>Entered: show sw-management downloads</xmp></pre>'}, {'id': 29, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.cli</b>: 98:<pre class="text-justify"><xmp>CLi responde Received: show sw-management downloads\r\r\n  \x1b[1;4mdownloads\x1b[0m                                                      \r\r\n  \x1b[1;4mmanifest-ThanOS-F1.0-Main-nightly-2020.07.06_23_10.manifest\x1b[0m    \r\r\n[ ne ]\r\r\nroot@THANOS> </xmp></pre>'}, {'id': 30, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.cli</b>: 100:<pre class="text-justify"><xmp>After Removing ANSIescapeSquence=show sw-management downloads\r\r\n  downloads                                                      \r\r\n  manifest-ThanOS-F1.0-Main-nightly-2020.07.06_23_10.manifest    \r\r\n[ ne ]\r\r\nroot@THANOS> </xmp></pre>'}, {'id': 31, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.neapi.operations</b>: 92:<pre class="text-justify"><xmp>Build downloaded successfully.... !!!</xmp></pre>'}, {'id': 32, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.neapi.operations</b>: 125:<pre class="text-justify"><xmp>Pre-paring for Upgrade</xmp></pre>'}, {'id': 33, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.cli</b>: 67:<pre class="text-justify"><xmp>Entered: prepare-upgrade apply label=ThanOS-F1.0-Main-nightly-2020.07.06_23_10.manifest</xmp></pre>'}, {'id': 34, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.cli</b>: 98:<pre class="text-justify"><xmp>CLi responde Received: prepare-upgrade apply label=ThanOS-F1.0-Main-nightly-2020.07.06_23_10.manifest\r\r\nPrepare-upgrade initiated...\r\r\nPrepare-upgrade apply initiated. Please use the show commands for status\r\r\n[ ne ]\r\r\nroot@THANOS> </xmp></pre>'}, {'id': 35, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.cli</b>: 100:<pre class="text-justify"><xmp>After Removing ANSIescapeSquence=prepare-upgrade apply label=ThanOS-F1.0-Main-nightly-2020.07.06_23_10.manifest\r\r\nPrepare-upgrade initiated...\r\r\nPrepare-upgrade apply initiated. Please use the show commands for status\r\r\n[ ne ]\r\r\nroot@THANOS> </xmp></pre>'}, {'id': 36, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.cli</b>: 67:<pre class="text-justify"><xmp>Entered: show sw-management software-load-installable</xmp></pre>'}, {'id': 37, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.cli</b>: 98:<pre class="text-justify"><xmp>CLi responde Received: show sw-management software-load-installable\r\r\n  \x1b[1;4msoftware-load-installable\x1b[0m                         \r\r\n  \x1b[1;4msw-component-installable/chm6-F1.0-Main.tar.gz\x1b[0m    \r\r\n  \x1b[1;4msw-component-installable/xmm4-F1.0-Main.tar.gz\x1b[0m    \r\r\n  swload-version                                              \'R1.0.0\' \r\r\n  swload-manifest                                             \'ThanOS-F1.0-Main-nightly-2020.07.06_23_10.manifest\' \r\r\n  swload-prepared                                             true \r\r\n  swload-status                                               apply-complete \r\r\n  swload-information                                          \'2020-07-07 07:27:08:APPLY IN PROGRESS\r\r\n                                                              2020-07-07 07:27:16:APPLY COMPLETE\' \r\r\n  swload-vendor                                               \'Infinera\' \r\r\n  swload-product                                              \'ThanOS\' \r\r\n  swload-label                                                \'ThanOS-F1.0-Main-nightly-2020.07.06_23_10\' \r\r\n[ ne ]\r\r\nroot@THANOS> </xmp></pre>'}, {'id': 38, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.cli</b>: 100:<pre class="text-justify"><xmp>After Removing ANSIescapeSquence=show sw-management software-load-installable\r\r\n  software-load-installable                         \r\r\n  sw-component-installable/chm6-F1.0-Main.tar.gz    \r\r\n  sw-component-installable/xmm4-F1.0-Main.tar.gz    \r\r\n  swload-version                                              \'R1.0.0\' \r\r\n  swload-manifest                                             \'ThanOS-F1.0-Main-nightly-2020.07.06_23_10.manifest\' \r\r\n  swload-prepared                                             true \r\r\n  swload-status                                               apply-complete \r\r\n  swload-information                                          \'2020-07-07 07:27:08:APPLY IN PROGRESS\r\r\n                                                              2020-07-07 07:27:16:APPLY COMPLETE\' \r\r\n  swload-vendor                                               \'Infinera\' \r\r\n  swload-product                                              \'ThanOS\' \r\r\n  swload-label                                                \'ThanOS-F1.0-Main-nightly-2020.07.06_23_10\' \r\r\n[ ne ]\r\r\nroot@THANOS> </xmp></pre>'}, {'id': 39, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.neapi.operations</b>: 180:<pre class="text-justify"><xmp>Build installation done Successfully..</xmp></pre>'}, {'id': 40, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.neapi.operations</b>: 209:<pre class="text-justify"><xmp><-------- Iteration 0--------------></xmp></pre>'}, {'id': 41, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.cli</b>: 67:<pre class="text-justify"><xmp>Entered: show sw-management software-load-installable</xmp></pre>'}, {'id': 42, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.cli</b>: 98:<pre class="text-justify"><xmp>CLi responde Received: show sw-management software-load-installable\r\r\n  \x1b[1;4msoftware-load-installable\x1b[0m                         \r\r\n  \x1b[1;4msw-component-installable/chm6-F1.0-Main.tar.gz\x1b[0m    \r\r\n  \x1b[1;4msw-component-installable/xmm4-F1.0-Main.tar.gz\x1b[0m    \r\r\n  swload-version                                              \'R1.0.0\' \r\r\n  swload-manifest                                             \'ThanOS-F1.0-Main-nightly-2020.07.06_23_10.manifest\' \r\r\n  swload-prepared                                             true \r\r\n  swload-status                                               apply-complete \r\r\n  swload-information                                          \'2020-07-07 07:27:08:APPLY IN PROGRESS\r\r\n                                                              2020-07-07 07:27:16:APPLY COMPLETE\' \r\r\n  swload-vendor                                               \'Infinera\' \r\r\n  swload-product                                              \'ThanOS\' \r\r\n  swload-label                                                \'ThanOS-F1.0-Main-nightly-2020.07.06_23_10\' \r\r\n[ ne ]\r\r\nroot@THANOS> </xmp></pre>'}, {'id': 43, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.cli</b>: 100:<pre class="text-justify"><xmp>After Removing ANSIescapeSquence=show sw-management software-load-installable\r\r\n  software-load-installable                         \r\r\n  sw-component-installable/chm6-F1.0-Main.tar.gz    \r\r\n  sw-component-installable/xmm4-F1.0-Main.tar.gz    \r\r\n  swload-version                                              \'R1.0.0\' \r\r\n  swload-manifest                                             \'ThanOS-F1.0-Main-nightly-2020.07.06_23_10.manifest\' \r\r\n  swload-prepared                                             true \r\r\n  swload-status                                               apply-complete \r\r\n  swload-information                                          \'2020-07-07 07:27:08:APPLY IN PROGRESS\r\r\n                                                              2020-07-07 07:27:16:APPLY COMPLETE\' \r\r\n  swload-vendor                                               \'Infinera\' \r\r\n  swload-product                                              \'ThanOS\' \r\r\n  swload-label                                                \'ThanOS-F1.0-Main-nightly-2020.07.06_23_10\' \r\r\n[ ne ]\r\r\nroot@THANOS> </xmp></pre>'}, {'id': 44, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.neapi.operations</b>: 212:<pre class="text-justify"><xmp>Pre Upgrade completed.. Image is ready for activation..</xmp></pre>'}, {'id': 45, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.neapi.operations</b>: 131:<pre class="text-justify"><xmp>Activating SW</xmp></pre>'}, {'id': 46, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.cli</b>: 67:<pre class="text-justify"><xmp>Entered: activate-file swimage label=ThanOS-F1.0-Main-nightly-2020.07.06_23_10.manifest -f</xmp></pre>'}, {'id': 47, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.cli</b>: 98:<pre class="text-justify"><xmp>CLi responde Received: activate-file swimage label=ThanOS-F1.0-Main-nightly-2020.07.06_23_10.manifest -f\r\r\nSoftware Activation Initiated\r\r\n</xmp></pre>'}, {'id': 48, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.cli</b>: 100:<pre class="text-justify"><xmp>After Removing ANSIescapeSquence=activate-file swimage label=ThanOS-F1.0-Main-nightly-2020.07.06_23_10.manifest -f\r\r\nSoftware Activation Initiated\r\r\n</xmp></pre>'}, {'id': 49, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.neapi.operations</b>: 264:<pre class="text-justify"><xmp>Activate command initiated... Sleeping for 780 seconds..</xmp></pre>'}, {'id': 50, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.neapi.operations</b>: 133:<pre class="text-justify"><xmp>Activated SW. Sleeping for 300 seconds for NE bring-up</xmp></pre>'}, {'id': 51, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.cli</b>: 67:<pre class="text-justify"><xmp>Entered: show sw-management software-load-active</xmp></pre>'}, {'id': 52, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.cli</b>: 73:<pre class="text-justify"><xmp>got Exception </xmp></pre>'}, {'id': 53, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.cli</b>: 74:<pre class="text-justify"><xmp>Socket is closed</xmp></pre>'}, {'id': 54, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.cli</b>: 56:<pre class="text-justify"><xmp>Connected successfully to \'172.16.11.196\' via SSH</xmp></pre>'}, {'id': 55, 'scriptlog': '<span class="badge badge-Light">DEBUG</span>: <b>pace.neapi.operations</b>: 325:<pre class="text-justify"><xmp>SSH connection to \'172.16.11.196\' failed:\'NoneType\' object has no attribute \'open_session\'</xmp></pre>'}, {'id': 56, 'scriptlog': '<span class="badge badge-danger">ERROR</span>: <b>TestStepVerification</b>: 301: <br><b> &nbsp;&nbsp; &nbsp;&nbsp;</b>:<pre class="text-justify"><xmp>Test Step Failed at "..\\..\\..\\Python\\Python37\\Lib\\pacelib\\SW\\SW.py 326" in function:verify_installed_image(), ErrorMessage: pytest.evaluate(False)\n\nVariables: \nself = <pacelib.SW.SW.SW object at 0x00000179BA42FF98>\nimage_name = \'ThanOS-F1.0-Main-nightly-2020.07.06_23_10.manifest\'\nis_negative_step = False\nverify_image = \'ThanOS-F1.0-Main-nightly-2020.07.06_23_10\'\nsimulator_name = None\nappId = \'SW\'\nexe = Exception("SSH connection to \'172.16.11.196\' failed:\'NoneType\' object has no attribute \'open_session\'")</xmp></pre>'}, {'id': 57, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.neapi.operations</b>: 136:<pre class="text-justify"><xmp>Configuring DCN</xmp></pre>'}, {'id': 58, 'scriptlog': '<span class="badge badge-Light">DEBUG</span>: <b>pace.sessions.ssh</b>: 70:<pre class="text-justify"><xmp>Looks like NE connectivity went down.. Let me wait for 15 seconds and will try connecting back...</xmp></pre>'}, {'id': 59, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 56:<pre class="text-justify"><xmp>Connected successfully to \'10.220.160.28\' via SSH</xmp></pre>'}, {'id': 60, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 114:<pre class="text-justify"><xmp>Entered: virsh console PaceSanity_cc1 --force</xmp></pre>'}, {'id': 61, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 132:<pre class="text-justify"><xmp>After Removing ANSIescapeSquence=Linux in-160sim28 4.19.0-8-amd64 #1 SMP Debian 4.19.98-1 (2020-01-26) x86_64\r\n\r\nThe programs included with the Debian GNU/Linux system are free software;\r\nthe exact distribution terms for each program are described in the\r\nindividual files in /usr/share/doc/*/copyright.\r\n\r\nDebian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent\r\npermitted by applicable law.\r\nLast login: Tue Jul  7 12:55:55 2020 from 10.220.118.160\r\r\nvirsh console PaceSanity_cc1 --force\r\nkarthik@in-160sim28:~$ virsh console PaceSanity_cc1 --force\r\nConnected to domain PaceSanity_cc1\r\nEscape character is ^]\r\n</xmp></pre>'}, {'id': 62, 'scriptlog': '<span class="badge badge-success">PASSED</span>: <b>TestStepVerification</b>: 308: <br><b>sut = \'ThanOSServer_1\' &nbsp;&nbsp;cmd = \'virsh console PaceSanity_cc1 --force\' &nbsp;&nbsp;verification = {Contains: [\'Escape character is ^]\']}</b>:<pre class="text-justify"><xmp>Test Step Passed at ..\\..\\..\\python\\python37\\lib\\site-packages\\pace\\neapi\\operations.py 1463 in NE_SSH(),  Message: pytest.evaluate(result)\n\nVariables: \nsut = \'ThanOSServer_1\'\ncmd = \'virsh console PaceSanity_cc1 --force\'\ntoVerify = {<Output.CONTAINS: \'CONTAINS\'>: [\'Escape character is ^]\']}\nmodifyOutput = {}\nappId = \'setup\'\nwaitTime = 2\nretries = 0\nprompt = None\ninterface = \'NE_SSH\'\nsessionId = \'ThanOSServer_1_OBJ_NE_SSH_setup\'\noutputResp = \'Linux in-160sim28 4.19.0-8-amd64 #1 SMP Debian 4.19.98-1 (2020-01-26) x86_64\\r\\n\\r\\nThe programs included with the De...n-160sim28:~$ virsh console PaceSanity_cc1 --force\\r\\nConnected to domain PaceSanity_cc1\\r\\nEscape character is ^]\\r\\n\'\nresult = True</xmp></pre>'}, {'id': 63, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 114:<pre class="text-justify"><xmp>Entered: </xmp></pre>'}, {'id': 64, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 132:<pre class="text-justify"><xmp>After Removing ANSIescapeSquence=\r\r\nlocalhost login: </xmp></pre>'}, {'id': 65, 'scriptlog': '<span class="badge badge-success">PASSED</span>: <b>TestStepVerification</b>: 308: <br><b>sut = \'ThanOSServer_1\' &nbsp;&nbsp;cmd = \'\' &nbsp;&nbsp;verification = {Contains: [\'localhost login:\']}</b>:<pre class="text-justify"><xmp>Test Step Passed at ..\\..\\..\\python\\python37\\lib\\site-packages\\pace\\neapi\\operations.py 1463 in NE_SSH(),  Message: pytest.evaluate(result)\n\nVariables: \nsut = \'ThanOSServer_1\'\ncmd = \'\'\ntoVerify = {<Output.CONTAINS: \'CONTAINS\'>: [\'localhost login:\']}\nmodifyOutput = {}\nappId = \'setup\'\nwaitTime = 2\nretries = 0\nprompt = None\ninterface = \'NE_SSH\'\nsessionId = \'ThanOSServer_1_OBJ_NE_SSH_setup\'\noutputResp = \'\\r\\r\\nlocalhost login: \'\nresult = True</xmp></pre>'}, {'id': 66, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 114:<pre class="text-justify"><xmp>Entered: root</xmp></pre>'}, {'id': 67, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 132:<pre class="text-justify"><xmp>After Removing ANSIescapeSquence=root\r\r\nPassword: </xmp></pre>'}, {'id': 68, 'scriptlog': '<span class="badge badge-success">PASSED</span>: <b>TestStepVerification</b>: 308: <br><b>sut = \'ThanOSServer_1\' &nbsp;&nbsp;cmd = \'root\' &nbsp;&nbsp;verification = {Contains: [\'Password:\']}</b>:<pre class="text-justify"><xmp>Test Step Passed at ..\\..\\..\\python\\python37\\lib\\site-packages\\pace\\neapi\\operations.py 1463 in NE_SSH(),  Message: pytest.evaluate(result)\n\nVariables: \nsut = \'ThanOSServer_1\'\ncmd = \'root\'\ntoVerify = {<Output.CONTAINS: \'CONTAINS\'>: [\'Password:\']}\nmodifyOutput = {}\nappId = \'setup\'\nwaitTime = 2\nretries = 0\nprompt = None\ninterface = \'NE_SSH\'\nsessionId = \'ThanOSServer_1_OBJ_NE_SSH_setup\'\noutputResp = \'root\\r\\r\\nPassword: \'\nresult = True</xmp></pre>'}, {'id': 69, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 114:<pre class="text-justify"><xmp>Entered: onl</xmp></pre>'}, {'id': 70, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 132:<pre class="text-justify"><xmp>After Removing ANSIescapeSquence=\r\nLinux localhost 4.19.81-OpenNetworkLinux-thanos #1 SMP Tue May 19 10:10:46 UTC 2020 x86_64\r\nroot@localhost:~# </xmp></pre>'}, {'id': 71, 'scriptlog': '<span class="badge badge-success">PASSED</span>: <b>TestStepVerification</b>: 308: <br><b>sut = \'ThanOSServer_1\' &nbsp;&nbsp;cmd = \'onl\' &nbsp;&nbsp;verification = {Contains: [\'root@localhost:~#\']}</b>:<pre class="text-justify"><xmp>Test Step Passed at ..\\..\\..\\python\\python37\\lib\\site-packages\\pace\\neapi\\operations.py 1463 in NE_SSH(),  Message: pytest.evaluate(result)\n\nVariables: \nsut = \'ThanOSServer_1\'\ncmd = \'onl\'\ntoVerify = {<Output.CONTAINS: \'CONTAINS\'>: [\'root@localhost:~#\']}\nmodifyOutput = {}\nappId = \'setup\'\nwaitTime = 2\nretries = 0\nprompt = None\ninterface = \'NE_SSH\'\nsessionId = \'ThanOSServer_1_OBJ_NE_SSH_setup\'\noutputResp = \'\\r\\nLinux localhost 4.19.81-OpenNetworkLinux-thanos #1 SMP Tue May 19 10:10:46 UTC 2020 x86_64\\r\\nroot@localhost:~# \'\nresult = True</xmp></pre>'}, {'id': 72, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 114:<pre class="text-justify"><xmp>Entered: ifconfig DCN 172.16.11.196 netmask 255.255.255.224 up</xmp></pre>'}, {'id': 73, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 132:<pre class="text-justify"><xmp>After Removing ANSIescapeSquence=ifconfig DCN 172.16.11.196 netmask 255.255.255.224 up\r\nroot@localhost:~# </xmp></pre>'}, {'id': 74, 'scriptlog': '<span class="badge badge-success">PASSED</span>: <b>TestStepVerification</b>: 308: <br><b>sut = \'ThanOSServer_1\' &nbsp;&nbsp;cmd = \'ifconfig DCN 172.16.11.196 netmask 255.255.255.224 up\' &nbsp;&nbsp;verification = {Contains: [\'root@localhost:~#\']}</b>:<pre class="text-justify"><xmp>Test Step Passed at ..\\..\\..\\python\\python37\\lib\\site-packages\\pace\\neapi\\operations.py 1463 in NE_SSH(),  Message: pytest.evaluate(result)\n\nVariables: \nsut = \'ThanOSServer_1\'\ncmd = \'ifconfig DCN 172.16.11.196 netmask 255.255.255.224 up\'\ntoVerify = {<Output.CONTAINS: \'CONTAINS\'>: [\'root@localhost:~#\']}\nmodifyOutput = {}\nappId = \'setup\'\nwaitTime = 2\nretries = 0\nprompt = None\ninterface = \'NE_SSH\'\nsessionId = \'ThanOSServer_1_OBJ_NE_SSH_setup\'\noutputResp = \'ifconfig DCN 172.16.11.196 netmask 255.255.255.224 up\\r\\nroot@localhost:~# \'\nresult = True</xmp></pre>'}, {'id': 75, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 114:<pre class="text-justify"><xmp>Entered: route add default gw 172.16.11.193</xmp></pre>'}, {'id': 76, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 132:<pre class="text-justify"><xmp>After Removing ANSIescapeSquence=route add default gw 172.16.11.193\r\nSIOCADDRT: Network is unreachable\r\nroot@localhost:~# </xmp></pre>'}, {'id': 77, 'scriptlog': '<span class="badge badge-success">PASSED</span>: <b>TestStepVerification</b>: 308: <br><b>sut = \'ThanOSServer_1\' &nbsp;&nbsp;cmd = \'route add default gw 172.16.11.193\' &nbsp;&nbsp;verification = {Contains: [\'root@localhost:~#\']}</b>:<pre class="text-justify"><xmp>Test Step Passed at ..\\..\\..\\python\\python37\\lib\\site-packages\\pace\\neapi\\operations.py 1463 in NE_SSH(),  Message: pytest.evaluate(result)\n\nVariables: \nsut = \'ThanOSServer_1\'\ncmd = \'route add default gw 172.16.11.193\'\ntoVerify = {<Output.CONTAINS: \'CONTAINS\'>: [\'root@localhost:~#\']}\nmodifyOutput = {}\nappId = \'setup\'\nwaitTime = 2\nretries = 0\nprompt = None\ninterface = \'NE_SSH\'\nsessionId = \'ThanOSServer_1_OBJ_NE_SSH_setup\'\noutputResp = \'route add default gw 172.16.11.193\\r\\nSIOCADDRT: Network is unreachable\\r\\nroot@localhost:~# \'\nresult = True</xmp></pre>'}, {'id': 78, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 114:<pre class="text-justify"><xmp>Entered: exit -f</xmp></pre>'}, {'id': 79, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 132:<pre class="text-justify"><xmp>After Removing ANSIescapeSquence=exit -f\r\nlogout\r\n-bash: exit: -f: numeric argument required\r\n\r\r\nOpen Network Linux OS ONL-thanos_master, 2020-05-29.07:09-c6c7b5b\r\n\r\nlocalhost login: </xmp></pre>'}, {'id': 80, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 114:<pre class="text-justify"><xmp>Entered: exit -f</xmp></pre>'}, {'id': 81, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 132:<pre class="text-justify"><xmp>After Removing ANSIescapeSquence=exit -f\r\r\nPassword: </xmp></pre>'}, {'id': 82, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>root</b>: 489:<pre class="text-justify"><xmp>Final auto environment cleanup skipped</xmp></pre>'}, {'id': 83, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.utility.pacedb</b>: 135:<pre class="text-justify"><xmp>getPurposeName called</xmp></pre>'}, {'id': 84, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.utility.pacedb</b>: 142:<pre class="text-justify"><xmp>Exception in getPurposeName</xmp></pre>'}, {'id': 85, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.utility.pacedb</b>: 143:<pre class="text-justify"><xmp>1054 (42S22): Unknown column \'None\' in \'where clause\'</xmp></pre>'}, {'id': 86, 'scriptlog': '<span class ="badge badge-info">STDOUT:</span> <div style="white-space: pre-wrap;"><pre>\r\nPinging 172.16.11.196 with 32 bytes of data:\r\nReply from 172.16.11.196: bytes=32 time=24ms TTL=60\r\n\r\nPing statistics for 172.16.11.196:\r\n    Packets: Sent = 1, Received = 1, Lost = 0 (0% loss),\r\nApproximate round trip times in milli-seconds:\r\n    Minimum = 24ms, Maximum = 24ms, Average = 24ms\r\nreading data from socket..!\nsocket not ready.. wait for 1 sec\nreading data from socket..!\nsocket not ready.. wait for 1 sec\nreading data from socket..!\nsocket not ready.. wait for 1 sec\nreading data from socket..!\nsocket not ready.. wait for 1 sec\nreading data from socket..!\nsocket not ready.. wait for 1 sec\nreading data from socket..!\nsocket not ready.. wait for 1 sec\nreading data from socket..!\nsocket not ready.. wait for 1 sec\nreading data from socket..!\nsocket not ready.. wait for 1 sec\nreading data from socket..!\nsocket not ready.. wait for 1 sec\nConnected to VM\nreading data from socket..!\nsocket not ready.. wait for 1 sec\nreading data from socket..!\nsocket not ready.. wait for 1 sec\nreading data from socket..!\nreading data from socket..!\nreading data from socket..!\nsocket not ready.. wait for 1 sec\n************************ tear down in plugin******************************\n</pre>'}], 'TestStepsCount': '<span class ="badge badge-primary"> Total: 8</span> <span class ="badge badge-success"> Pass: 7</span> <span class ="badge badge-danger"> Fail: 1</span> '}] ,
+            "columns": [{
+                "className": 'details-control',
+                "orderable": false,
+                "data": null,
+                "defaultContent": '',
+                "render": function () {
+                  return '<i class="fa fa-plus-square" aria-hidden="true"></i>';
+                },
+                width: "15px"
+              },
+              {
+                "data": "Result"
+              },
+              {
+                "data": "Test"
+              },
+              {
+                "data": "Title"
+              },
+              {
+                "data": "Duration"
+              },
+              {
+                "data": "TestStepsCount"
+              }
+            ],
+            "order": [
+              [1, 'asc']
+            ]
+          });
+
+
+          // Add event listener for opening and closing details
+          $('#example tbody').on('click', 'td.details-control', function () {
+            var tr = $(this).closest('tr');
+            var tdi = tr.find("i.fa");
+            var row = table.row(tr);
+
+            if (row.child.isShown()) {
+              // This row is already open - close it
+              row.child.hide();
+			  destroyChild(row);
+              tr.removeClass('shown');			  
+              tdi.first().removeClass('fa-minus-square');
+              tdi.first().addClass('fa-plus-square');
+            } else {
+              // Open this row
+              //row.child(format(row.data())).show();
+			  createChild(row,format(row.data()));
+              tr.addClass('shown');
+              tdi.first().removeClass('fa-plus-square');
+              tdi.first().addClass('fa-minus-square');
+            }
+          });
+
+          table.on("user-select", function (e, dt, type, cell, originalEvent) {
+            if ($(cell.node()).hasClass("details-control")) {
+              e.preventDefault();
+            }
+          });
+        });
+
+        function format(d) {
+
+          // `d` is the original data object for the row
+          return d.Extralog;
+        }
+		function createChild(row,d) {
+		
+			var rowData = row.data();
+
+			// This is the table we'll convert into a DataTable
+			var table = $('<table class="display" width="95%"/>');
+
+			// Display it the child row
+			row.child(table).show();
+
+
+			// Child row DataTable configuration, always passes the parent row's id to server
+			var usersTable = table.DataTable({
+				"lengthMenu": [10, 25, 50, 100,500,1000],
+				filter: true,		
+				data:d,
+				columns: [
+					{ title: "id", data: "id" },
+					{ title: "ScriptLog", data: "scriptlog" }						
+				],
+				"columnDefs": [
+				{ "width": "5%", "targets": 0 }],
+				select: true,		
+			});
+
+			// On change, update the content of the parent table's host row
+			// This isn't particularly efficient as it requires the child row
+			// to be regenerated once the main table has been reloaded. A
+			// better method would be to query the data for the new user counts
+			// and update each existing row, but that is beyond the scope of
+			// this post.
+			/*usersEditor.on( 'submitSuccess', function (e, json, data, action) {
+				row.ajax.reload(function () {
+					$(row.cell( row.id(true), 0 ).node()).click();
+				});
+			} );*/
+		}
+	
+		function destroyChild(row) {
+			// Remove and destroy the DataTable in the child row
+			var table = $("table", row.child());
+			table.detach();
+			table.DataTable().destroy();
+
+			// And then hide the row
+			row.child.hide();
+		}
+
+      </script>
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Result');
+        data.addColumn('number', 'Percentage');
+        data.addRows([
+                 
+                  
+                    ["failed",1],
+                  
+                  
+                  
+                  
+                ]);       
+   
+        data.sort([{column: 1, desc: true}]);
+        var colors = {
+            'passed': 'green',
+            'failed': 'red',
+            'xfailed': '#a8232e',
+            'xpassed': '#32aa0d',
+            'error' : '#960000',
+            'skipped' : '#ffff00',
+          };
+        var slices = [];
+        for (var i = 0; i < data.getNumberOfRows(); i++) {
+          slices.push({
+            color: colors[data.getValue(i, 0)]
+          });
+        }
+
+      var options = {
+        hAxis: {title: 'Year', titleTextStyle: {color: 'red'}},
+        pieSliceText: 'label',
+        pieStartAngle: 100,
+        
+      };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+        chart.draw(data,{slices: slices}, options);
+      }
+    </script>
+</body>
+
+</html>

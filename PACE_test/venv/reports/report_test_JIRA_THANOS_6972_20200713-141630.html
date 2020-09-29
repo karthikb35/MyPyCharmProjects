@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js">
+  </script>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+  <style>
+  table{
+	  margin: 0 auto;
+	  width: 100%;
+	  clear: both;
+	  border-collapse: collapse;
+	  table-layout: fixed; // ***********add this
+	  word-wrap:break-word; // ***********and this
+	}
+		
+    td.details-control {
+      text-align: center;
+      color: forestgreen;
+      cursor: pointer;
+    }
+
+    tr.shown td.details-control {
+      text-align: center;
+      color: forestgreen;
+    }
+
+    pre {
+       outline: 1px solid #ccc; 
+    padding: 5px; 
+    margin: 5px; 
+    white-space: pre-wrap;       
+    white-space: -moz-pre-wrap;  
+    white-space: -pre-wrap;      
+    white-space: -o-pre-wrap;    
+    word-wrap: break-word;   
+    
+    }
+    
+    table.resulttable {
+        table-layout: fixed;
+        word-wrap: break-word;
+    }    
+    table.summarytable td {
+   text-align: center;  
+}
+    
+}
+  </style>
+  <title>Infinera PACE Automation Report</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md">
+        <p><u> Report Generated On <b>13-July-2020  at 14:16</b> By Infinera PACE Automation Framework</u> </P>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <p>Total <b>1</b> Scripts ran in 958.9 seconds <br>
+        <h5> Script Summary </h5>
+        <table class="table table-sm table-bordered summarytable">  
+          <tbody>
+            <tr>
+             
+              
+              <td class="mx-auto">
+              
+              <p class="text-center">PASSED <br> 1</p>
+              
+              </td>
+              
+              <td class="mx-auto">
+              
+              <div class="mx-auto" >TOTAL<br> 1</div>
+              
+              </td>
+              
+              
+            </tr>
+            </tbody>
+          </table>
+        <h5> Test Steps Summary </h5>
+         <table class="table summarytable table-bordered">  
+          <tbody>
+            <tr>
+     
+          
+          
+          <td>
+          
+          FAILED_STEPS_COUNT <br> 0
+          
+          </td>
+          
+          <td>
+          
+          PASSED_STEPS_COUNT <br> 8
+          
+          </td>
+          
+          <td>
+          
+          ERROR_COUNT <br>0
+          
+          </td>
+          
+          <td>
+          
+          TOTAL<br> 8    
+          
+          </td>
+          
+          
+          </tr>
+            </tbody>
+          </table>
+      </div>
+      <div  class="col-6" id="piechart" ></div>
+    </div>
+    
+ <div class="row">
+ <div class="col-md">
+    
+    <p> <span class="badge badge-pill badge-info">Script Path: </span> root
+    </div></div>
+      
+      <div class="row">
+        <div class="col-md">
+          <h4>Results</h4>
+          <table id="example" class="display table resulttable" style="width:100%">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Result</th>
+                <th>Test case ID</th>
+                <th style="width:50%"> Title</th>
+                <th>Duration</th>
+                <th>TestStep Count</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          
+          <h4>Environment</h4>
+          <table class="table table-hover table-sm table-responsive-sm">
+            <tbody>
+              
+              <tr>
+                <td>Python</td>
+                <td>3.7.2</td>
+              </tr>
+              
+              <tr>
+                <td>Platform</td>
+                <td>Windows-10-10.0.18362-SP0</td>
+              </tr>
+              
+              <tr>
+                <td>Packages</td>
+                <td>{'pytest': '5.4.3', 'py': '1.8.1', 'pluggy': '0.13.1'}</td>
+              </tr>
+              
+              <tr>
+                <td>Plugins</td>
+                <td>{'pace': '1.16.15-06-2020', 'metadata': '1.9.0', 'sugar': '0.9.3'}</td>
+              </tr>
+              
+              <tr>
+                <td>Feature</td>
+                <td>Infinera</td>
+              </tr>
+              
+            </tbody>
+          </table>
+          
+        </div>
+      </div>
+      <script>
+        $(document).ready(function () {
+          var table = $('#example').DataTable({
+            "paging": true,
+            "ordering": true,
+            "info": false,
+            "processing": true,
+            select: "single",
+            data: [{'Test': 'THANOS-6972', 'Title': 'Sanity: Create a VM with template1 and configure the DCN IP', 'Result': '<span class ="badge badge-success">Passed</span>', 'Duration': 955.17, 'Extralog': [{'id': 1, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.utility.environment_cleanup</b>: 25:<pre class="text-justify"><xmp>Executing auto environment cleanup for Input...</xmp></pre>'}, {'id': 2, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>root</b>: 473:<pre class="text-justify"><xmp>Initial auto environment cleanup wasn\'t executed as module \'pacelib.Fixtures.ThanOS_Env_Fixtures\' has no attribute \'Input\'\nContinuing execution...</xmp></pre>'}, {'id': 3, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 56:<pre class="text-justify"><xmp>Connected successfully to \'10.220.160.28\' via SSH</xmp></pre>'}, {'id': 4, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 114:<pre class="text-justify"><xmp>Entered: chassisx.py delete chassis PaceSanity</xmp></pre>'}, {'id': 5, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 132:<pre class="text-justify"><xmp>After Removing ANSIescapeSquence=Linux in-160sim28 4.19.0-8-amd64 #1 SMP Debian 4.19.98-1 (2020-01-26) x86_64\r\n\r\nThe programs included with the Debian GNU/Linux system are free software;\r\nthe exact distribution terms for each program are described in the\r\nindividual files in /usr/share/doc/*/copyright.\r\n\r\nDebian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent\r\npermitted by applicable law.\r\nLast login: Mon Jul 13 13:59:48 2020 from 10.220.116.239\r\r\nchassisx.py delete chassis PaceSanity\r\nkarthik@in-160sim28:~$ chassisx.py delete chassis PaceSanity\r\nfilename for user karthik: /home/karthik/.vm/PaceSanity.txt\r\nline here is PaceSanity_cc1\r\n\r\nDomain PaceSanity_cc1 destroyed\r\n\r\nDomain PaceSanity_cc1 has been undefined\r\n\r\ndeleteing bridges..\r\nsudo ifconfig 3_1aux1 down\r\nsudo brctl delbr 3_1aux1\r\nsudo ifconfig 3_1aux2 down\r\nsudo brctl delbr 3_1aux2\r\nsudo ifconfig 3_craft down\r\nsudo brctl delbr 3_craft\r\nsudo ifconfig 3v10 down\r\nsudo brctl delbr 3v10\r\nsudo ifconfig 3m2m down\r\nsudo brctl delbr 3m2m\r\n</xmp></pre>'}, {'id': 6, 'scriptlog': '<span class="badge badge-success">PASSED</span>: <b>TestStepVerification</b>: 308: <br><b>sut = \'ThanOSServer_1\' &nbsp;&nbsp;cmd = \'chassisx.py delete chassis PaceSanity\' &nbsp;&nbsp;verification = {Contains: [\'karthik@\']}</b>:<pre class="text-justify"><xmp>Test Step Passed at ..\\..\\..\\python\\python37\\lib\\site-packages\\pace\\neapi\\operations.py 1463 in NE_SSH(),  Message: pytest.evaluate(result)\n\nVariables: \nsut = \'ThanOSServer_1\'\ncmd = \'chassisx.py delete chassis PaceSanity\'\ntoVerify = {<Output.CONTAINS: \'CONTAINS\'>: [\'karthik@\']}\nmodifyOutput = {}\nappId = 1\nwaitTime = 2\nretries = 0\nprompt = None\ninterface = \'NE_SSH\'\nsessionId = \'ThanOSServer_1_OBJ_NE_SSH_1\'\noutputResp = \'Linux in-160sim28 4.19.0-8-amd64 #1 SMP Debian 4.19.98-1 (2020-01-26) x86_64\\r\\n\\r\\nThe programs included with the De...br 3_craft\\r\\nsudo ifconfig 3v10 down\\r\\nsudo brctl delbr 3v10\\r\\nsudo ifconfig 3m2m down\\r\\nsudo brctl delbr 3m2m\\r\\n\'\nresult = True</xmp></pre>'}, {'id': 7, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 56:<pre class="text-justify"><xmp>Connected successfully to \'10.220.160.28\' via SSH</xmp></pre>'}, {'id': 8, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 114:<pre class="text-justify"><xmp>Entered: chassisx.py create PaceSanity template0</xmp></pre>'}, {'id': 9, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 132:<pre class="text-justify"><xmp>After Removing ANSIescapeSquence=Linux in-160sim28 4.19.0-8-amd64 #1 SMP Debian 4.19.98-1 (2020-01-26) x86_64\r\n\r\nThe programs included with the Debian GNU/Linux system are free software;\r\nthe exact distribution terms for each program are described in the\r\nindividual files in /usr/share/doc/*/copyright.\r\n\r\nDebian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent\r\npermitted by applicable law.\r\nLast login: Mon Jul 13 14:00:39 2020 from 10.220.117.151\r\r\nkarthik@in-160sim28:~$ chassisx.py create PaceSanity template0\r\n3 is not in dictionary\r\nfilename for user karthik: /home/karthik/.vm/PaceSanity.txt\r\nid for current vm is: 3\r\nuser path directory made is /home/karthik/.vm_db/db/\r\n/home/karthik/.vm_db/db/PaceSanity_cc1.xml\r\n/home/karthik/.vm_db/db/PaceSanity_cc1.qcow2\r\n</xmp></pre>'}, {'id': 10, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 114:<pre class="text-justify"><xmp>Entered: chassisx.py start chassis PaceSanity</xmp></pre>'}, {'id': 11, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 132:<pre class="text-justify"><xmp>After Removing ANSIescapeSquence=adding bridges..\r\n\r\n\r\nsudo brctl addbr 3v11\r\n\r\n\r\n\r\nsudo brctl addbr 3_1aux1\r\n\r\nsudo brctl addbr 3_1aux2\r\n\r\nsudo brctl addbr 3_craft\r\n\r\nsudo brctl addbr 3v10\r\n\r\nsudo brctl addbr 3m2m\r\n\r\nDomain PaceSanity_cc1 defined from /home/karthik/.vm_db/db/PaceSanity_cc1.xml\r\n\r\nkarthik@in-160sim28:~$ chassisx.py start chassis PaceSanity\r\nfilename for user karthik: /home/karthik/.vm/PaceSanity.txt\r\nid for current vm is: 3\r\nfile /home/karthik/.vm/PaceSanity.txt for current vm exists\r\n\r\n\r\nadding bridges..\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nDomain PaceSanity_cc1 started\r\n\r\nkarthik@in-160sim28:~$ </xmp></pre>'}, {'id': 12, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 114:<pre class="text-justify"><xmp>Entered: virsh console PaceSanity_cc1 --force</xmp></pre>'}, {'id': 13, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 132:<pre class="text-justify"><xmp>After Removing ANSIescapeSquence=virsh console PaceSanity_cc1 --force\r\nConnected to domain PaceSanity_cc1\r\nEscape character is ^]\r\n</xmp></pre>'}, {'id': 14, 'scriptlog': '<span class="badge badge-success">PASSED</span>: <b>TestStepVerification</b>: 308: <br><b>sut = \'ThanOSServer_1\' &nbsp;&nbsp;cmd = \'virsh console PaceSanity_cc1 --force\' &nbsp;&nbsp;verification = {Contains: [\'Escape character is ^]\']}</b>:<pre class="text-justify"><xmp>Test Step Passed at ..\\..\\..\\python\\python37\\lib\\site-packages\\pace\\neapi\\operations.py 1463 in NE_SSH(),  Message: pytest.evaluate(result)\n\nVariables: \nsut = \'ThanOSServer_1\'\ncmd = \'virsh console PaceSanity_cc1 --force\'\ntoVerify = {<Output.CONTAINS: \'CONTAINS\'>: [\'Escape character is ^]\']}\nmodifyOutput = {}\nappId = \'setup\'\nwaitTime = 60\nretries = 0\nprompt = None\ninterface = \'NE_SSH\'\nsessionId = \'ThanOSServer_1_OBJ_NE_SSH_setup\'\noutputResp = \'virsh console PaceSanity_cc1 --force\\r\\nConnected to domain PaceSanity_cc1\\r\\nEscape character is ^]\\r\\n\'\nresult = True</xmp></pre>'}, {'id': 15, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 114:<pre class="text-justify"><xmp>Entered: </xmp></pre>'}, {'id': 16, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 132:<pre class="text-justify"><xmp>After Removing ANSIescapeSquence=\r\r\nlocalhost login: </xmp></pre>'}, {'id': 17, 'scriptlog': '<span class="badge badge-success">PASSED</span>: <b>TestStepVerification</b>: 308: <br><b>sut = \'ThanOSServer_1\' &nbsp;&nbsp;cmd = \'\' &nbsp;&nbsp;verification = {Contains: [\'localhost login:\']}</b>:<pre class="text-justify"><xmp>Test Step Passed at ..\\..\\..\\python\\python37\\lib\\site-packages\\pace\\neapi\\operations.py 1463 in NE_SSH(),  Message: pytest.evaluate(result)\n\nVariables: \nsut = \'ThanOSServer_1\'\ncmd = \'\'\ntoVerify = {<Output.CONTAINS: \'CONTAINS\'>: [\'localhost login:\']}\nmodifyOutput = {}\nappId = \'setup\'\nwaitTime = 60\nretries = 0\nprompt = None\ninterface = \'NE_SSH\'\nsessionId = \'ThanOSServer_1_OBJ_NE_SSH_setup\'\noutputResp = \'\\r\\r\\nlocalhost login: \'\nresult = True</xmp></pre>'}, {'id': 18, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 114:<pre class="text-justify"><xmp>Entered: root</xmp></pre>'}, {'id': 19, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 132:<pre class="text-justify"><xmp>After Removing ANSIescapeSquence=root\r\r\nPassword: </xmp></pre>'}, {'id': 20, 'scriptlog': '<span class="badge badge-success">PASSED</span>: <b>TestStepVerification</b>: 308: <br><b>sut = \'ThanOSServer_1\' &nbsp;&nbsp;cmd = \'root\' &nbsp;&nbsp;verification = {Contains: [\'Password:\']}</b>:<pre class="text-justify"><xmp>Test Step Passed at ..\\..\\..\\python\\python37\\lib\\site-packages\\pace\\neapi\\operations.py 1463 in NE_SSH(),  Message: pytest.evaluate(result)\n\nVariables: \nsut = \'ThanOSServer_1\'\ncmd = \'root\'\ntoVerify = {<Output.CONTAINS: \'CONTAINS\'>: [\'Password:\']}\nmodifyOutput = {}\nappId = \'setup\'\nwaitTime = 10\nretries = 0\nprompt = None\ninterface = \'NE_SSH\'\nsessionId = \'ThanOSServer_1_OBJ_NE_SSH_setup\'\noutputResp = \'root\\r\\r\\nPassword: \'\nresult = True</xmp></pre>'}, {'id': 21, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 114:<pre class="text-justify"><xmp>Entered: onl</xmp></pre>'}, {'id': 22, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 132:<pre class="text-justify"><xmp>After Removing ANSIescapeSquence=\r\nLinux localhost 4.19.81-OpenNetworkLinux-thanos #1 SMP Tue May 19 10:10:46 UTC 2020 x86_64\r\nroot@localhost:~# </xmp></pre>'}, {'id': 23, 'scriptlog': '<span class="badge badge-success">PASSED</span>: <b>TestStepVerification</b>: 308: <br><b>sut = \'ThanOSServer_1\' &nbsp;&nbsp;cmd = \'onl\' &nbsp;&nbsp;verification = {Contains: [\'root@localhost:~#\']}</b>:<pre class="text-justify"><xmp>Test Step Passed at ..\\..\\..\\python\\python37\\lib\\site-packages\\pace\\neapi\\operations.py 1463 in NE_SSH(),  Message: pytest.evaluate(result)\n\nVariables: \nsut = \'ThanOSServer_1\'\ncmd = \'onl\'\ntoVerify = {<Output.CONTAINS: \'CONTAINS\'>: [\'root@localhost:~#\']}\nmodifyOutput = {}\nappId = \'setup\'\nwaitTime = 10\nretries = 0\nprompt = None\ninterface = \'NE_SSH\'\nsessionId = \'ThanOSServer_1_OBJ_NE_SSH_setup\'\noutputResp = \'\\r\\nLinux localhost 4.19.81-OpenNetworkLinux-thanos #1 SMP Tue May 19 10:10:46 UTC 2020 x86_64\\r\\nroot@localhost:~# \'\nresult = True</xmp></pre>'}, {'id': 24, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 114:<pre class="text-justify"><xmp>Entered: /opt/infinera/thanos/local/bin/client</xmp></pre>'}, {'id': 25, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 132:<pre class="text-justify"><xmp>After Removing ANSIescapeSquence=/opt/infinera/thanos/local/bin/client\r\nConnecting user root from 127.0.0.1:13732\r\n****************************************** Warning ******************************************\r\r\n\r\r\nThis system is restricted to authorized users for business purposes. Unauthorized access is a\r\r\nviolation of the law. This service may be monitored for administrative and security reasons.\r\r\nBy proceeding, you consent to this monitoring.\r\r\n\r\r\n*********************************************************************************************\r\r\n\r\r\n\r\r\n[ ne ]\r\r\nroot@THANOS> </xmp></pre>'}, {'id': 26, 'scriptlog': '<span class="badge badge-success">PASSED</span>: <b>TestStepVerification</b>: 308: <br><b>sut = \'ThanOSServer_1\' &nbsp;&nbsp;cmd = \'/opt/infinera/thanos/local/bin/client\' &nbsp;&nbsp;verification = {Contains: [\'root@THANOS>\']}</b>:<pre class="text-justify"><xmp>Test Step Passed at ..\\..\\..\\python\\python37\\lib\\site-packages\\pace\\neapi\\operations.py 1463 in NE_SSH(),  Message: pytest.evaluate(result)\n\nVariables: \nsut = \'ThanOSServer_1\'\ncmd = \'/opt/infinera/thanos/local/bin/client\'\ntoVerify = {<Output.CONTAINS: \'CONTAINS\'>: [\'root@THANOS>\']}\nmodifyOutput = {}\nappId = \'setup\'\nwaitTime = 30\nretries = 0\nprompt = None\ninterface = \'NE_SSH\'\nsessionId = \'ThanOSServer_1_OBJ_NE_SSH_setup\'\noutputResp = \'/opt/infinera/thanos/local/bin/client\\r\\nConnecting user root from 127.0.0.1:13732\\r\\n*******************************...***************************************************************************\\r\\r\\n\\r\\r\\n\\r\\r\\n[ ne ]\\r\\r\\nroot@THANOS> \'\nresult = True</xmp></pre>'}, {'id': 27, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 114:<pre class="text-justify"><xmp>Entered: add ipv4-address-DCN/172.16.11.196 netmask 255.255.255.224</xmp></pre>'}, {'id': 28, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 132:<pre class="text-justify"><xmp>After Removing ANSIescapeSquence=add ipv4-address-DCN/172.16.11.196 netmask 255.255.255.224\r\r\nERROR: parent object does not exist\r\r\n[ ne ]\r\r\nroot@THANOS> </xmp></pre>'}, {'id': 29, 'scriptlog': '<span class="badge badge-success">PASSED</span>: <b>TestStepVerification</b>: 308: <br><b>sut = \'ThanOSServer_1\' &nbsp;&nbsp;cmd = \'add ipv4-address-DCN/172.16.11.196 netmask 255.255.255.224\' &nbsp;&nbsp;verification = {Contains: [\'root@THANOS>\']}</b>:<pre class="text-justify"><xmp>Test Step Passed at ..\\..\\..\\python\\python37\\lib\\site-packages\\pace\\neapi\\operations.py 1463 in NE_SSH(),  Message: pytest.evaluate(result)\n\nVariables: \nsut = \'ThanOSServer_1\'\ncmd = \'add ipv4-address-DCN/172.16.11.196 netmask 255.255.255.224\'\ntoVerify = {<Output.CONTAINS: \'CONTAINS\'>: [\'root@THANOS>\']}\nmodifyOutput = {}\nappId = \'setup\'\nwaitTime = 2\nretries = 0\nprompt = None\ninterface = \'NE_SSH\'\nsessionId = \'ThanOSServer_1_OBJ_NE_SSH_setup\'\noutputResp = \'add ipv4-address-DCN/172.16.11.196 netmask 255.255.255.224\\r\\r\\nERROR: parent object does not exist\\r\\r\\n[ ne ]\\r\\r\\nroot@THANOS> \'\nresult = True</xmp></pre>'}, {'id': 30, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 114:<pre class="text-justify"><xmp>Entered: add ipv4-static-route-0.0.0.0/0/MGMT next-hop-address 172.16.11.193</xmp></pre>'}, {'id': 31, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 132:<pre class="text-justify"><xmp>After Removing ANSIescapeSquence=add ipv4-static-route-0.0.0.0/0/MGMT next-hop-address 172.16.11.193 \x08\r\r\n[ ne ]\r\r\nroot@THANOS> </xmp></pre>'}, {'id': 32, 'scriptlog': '<span class="badge badge-success">PASSED</span>: <b>TestStepVerification</b>: 308: <br><b>sut = \'ThanOSServer_1\' &nbsp;&nbsp;cmd = \'add ipv4-static-route-0.0.0.0/0/MGMT next-hop-address 172.16.11.193\' &nbsp;&nbsp;verification = {Contains: [\'root@THANOS>\']}</b>:<pre class="text-justify"><xmp>Test Step Passed at ..\\..\\..\\python\\python37\\lib\\site-packages\\pace\\neapi\\operations.py 1463 in NE_SSH(),  Message: pytest.evaluate(result)\n\nVariables: \nsut = \'ThanOSServer_1\'\ncmd = \'add ipv4-static-route-0.0.0.0/0/MGMT next-hop-address 172.16.11.193\'\ntoVerify = {<Output.CONTAINS: \'CONTAINS\'>: [\'root@THANOS>\']}\nmodifyOutput = {}\nappId = \'setup\'\nwaitTime = 2\nretries = 0\nprompt = None\ninterface = \'NE_SSH\'\nsessionId = \'ThanOSServer_1_OBJ_NE_SSH_setup\'\noutputResp = \'add ipv4-static-route-0.0.0.0/0/MGMT next-hop-address 172.16.11.193 \\x08\\r\\r\\n[ ne ]\\r\\r\\nroot@THANOS> \'\nresult = True</xmp></pre>'}, {'id': 33, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 114:<pre class="text-justify"><xmp>Entered: exit -f</xmp></pre>'}, {'id': 34, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 132:<pre class="text-justify"><xmp>After Removing ANSIescapeSquence=exit -f\r\r\nShutting down the session\r\r\n\r\r\nConnection closed\r\nroot@localhost:~# </xmp></pre>'}, {'id': 35, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>root</b>: 489:<pre class="text-justify"><xmp>Final auto environment cleanup skipped</xmp></pre>'}, {'id': 36, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.utility.pacedb</b>: 135:<pre class="text-justify"><xmp>getPurposeName called</xmp></pre>'}, {'id': 37, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.utility.pacedb</b>: 142:<pre class="text-justify"><xmp>Exception in getPurposeName</xmp></pre>'}, {'id': 38, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.utility.pacedb</b>: 143:<pre class="text-justify"><xmp>1054 (42S22): Unknown column \'None\' in \'where clause\'</xmp></pre>'}, {'id': 39, 'scriptlog': '<span class ="badge badge-info">STDOUT:</span> <div style="white-space: pre-wrap;"><pre>reading data from socket..!\nreading data from socket..!\nreading data from socket..!\nsocket not ready.. wait for 1 sec\nreading data from socket..!\nsocket not ready.. wait for 1 sec\nreading data from socket..!\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nreading data from socket..!\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nreading data from socket..!\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nreading data from socket..!\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nConnected to VM\nreading data from socket..!\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nsocket not ready.. wait for 1 sec\nreading data from socket..!\nsocket not ready.. wait for 1 sec\nreading data from socket..!\nsocket not ready.. wait for 1 sec\nreading data from socket..!\nsocket not ready.. wait for 1 sec\n************************ tear down in plugin******************************\n</pre>'}], 'TestStepsCount': '<span class ="badge badge-primary"> Total: 8</span> <span class ="badge badge-success"> Pass: 8</span> '}] ,
+            "columns": [{
+                "className": 'details-control',
+                "orderable": false,
+                "data": null,
+                "defaultContent": '',
+                "render": function () {
+                  return '<i class="fa fa-plus-square" aria-hidden="true"></i>';
+                },
+                width: "15px"
+              },
+              {
+                "data": "Result"
+              },
+              {
+                "data": "Test"
+              },
+              {
+                "data": "Title"
+              },
+              {
+                "data": "Duration"
+              },
+              {
+                "data": "TestStepsCount"
+              }
+            ],
+            "order": [
+              [1, 'asc']
+            ]
+          });
+
+
+          // Add event listener for opening and closing details
+          $('#example tbody').on('click', 'td.details-control', function () {
+            var tr = $(this).closest('tr');
+            var tdi = tr.find("i.fa");
+            var row = table.row(tr);
+
+            if (row.child.isShown()) {
+              // This row is already open - close it
+              row.child.hide();
+			  destroyChild(row);
+              tr.removeClass('shown');			  
+              tdi.first().removeClass('fa-minus-square');
+              tdi.first().addClass('fa-plus-square');
+            } else {
+              // Open this row
+              //row.child(format(row.data())).show();
+			  createChild(row,format(row.data()));
+              tr.addClass('shown');
+              tdi.first().removeClass('fa-plus-square');
+              tdi.first().addClass('fa-minus-square');
+            }
+          });
+
+          table.on("user-select", function (e, dt, type, cell, originalEvent) {
+            if ($(cell.node()).hasClass("details-control")) {
+              e.preventDefault();
+            }
+          });
+        });
+
+        function format(d) {
+
+          // `d` is the original data object for the row
+          return d.Extralog;
+        }
+		function createChild(row,d) {
+		
+			var rowData = row.data();
+
+			// This is the table we'll convert into a DataTable
+			var table = $('<table class="display" width="95%"/>');
+
+			// Display it the child row
+			row.child(table).show();
+
+
+			// Child row DataTable configuration, always passes the parent row's id to server
+			var usersTable = table.DataTable({
+				"lengthMenu": [10, 25, 50, 100,500,1000],
+				filter: true,		
+				data:d,
+				columns: [
+					{ title: "id", data: "id" },
+					{ title: "ScriptLog", data: "scriptlog" }						
+				],
+				"columnDefs": [
+				{ "width": "5%", "targets": 0 }],
+				select: true,		
+			});
+
+			// On change, update the content of the parent table's host row
+			// This isn't particularly efficient as it requires the child row
+			// to be regenerated once the main table has been reloaded. A
+			// better method would be to query the data for the new user counts
+			// and update each existing row, but that is beyond the scope of
+			// this post.
+			/*usersEditor.on( 'submitSuccess', function (e, json, data, action) {
+				row.ajax.reload(function () {
+					$(row.cell( row.id(true), 0 ).node()).click();
+				});
+			} );*/
+		}
+	
+		function destroyChild(row) {
+			// Remove and destroy the DataTable in the child row
+			var table = $("table", row.child());
+			table.detach();
+			table.DataTable().destroy();
+
+			// And then hide the row
+			row.child.hide();
+		}
+
+      </script>
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Result');
+        data.addColumn('number', 'Percentage');
+        data.addRows([
+                 
+                  
+                    ["passed",1],
+                  
+                  
+                  
+                  
+                ]);       
+   
+        data.sort([{column: 1, desc: true}]);
+        var colors = {
+            'passed': 'green',
+            'failed': 'red',
+            'xfailed': '#a8232e',
+            'xpassed': '#32aa0d',
+            'error' : '#960000',
+            'skipped' : '#ffff00',
+          };
+        var slices = [];
+        for (var i = 0; i < data.getNumberOfRows(); i++) {
+          slices.push({
+            color: colors[data.getValue(i, 0)]
+          });
+        }
+
+      var options = {
+        hAxis: {title: 'Year', titleTextStyle: {color: 'red'}},
+        pieSliceText: 'label',
+        pieStartAngle: 100,
+        
+      };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+        chart.draw(data,{slices: slices}, options);
+      }
+    </script>
+</body>
+
+</html>

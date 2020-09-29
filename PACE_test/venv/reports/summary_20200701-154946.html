@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js">
+  </script>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+  <style>
+  table{
+	  margin: 0 auto;
+	  width: 100%;
+	  clear: both;
+	  border-collapse: collapse;
+	  table-layout: fixed; // ***********add this
+	  word-wrap:break-word; // ***********and this
+	}
+		
+    td.details-control {
+      text-align: center;
+      color: forestgreen;
+      cursor: pointer;
+    }
+
+    tr.shown td.details-control {
+      text-align: center;
+      color: forestgreen;
+    }
+
+    pre {
+       outline: 1px solid #ccc; 
+    padding: 5px; 
+    margin: 5px; 
+    white-space: pre-wrap;       
+    white-space: -moz-pre-wrap;  
+    white-space: -pre-wrap;      
+    white-space: -o-pre-wrap;    
+    word-wrap: break-word;   
+    
+    }
+    
+    table.resulttable {
+        table-layout: fixed;
+        word-wrap: break-word;
+    }    
+    table.summarytable td {
+   text-align: center;  
+}
+    
+}
+  </style>
+  <title>Infinera PACE Automation Report</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md">
+        <p><u> Report Generated On <b>01-July-2020  at 15:49</b> By Infinera PACE Automation Framework</u> </P>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <p>Total <b>2</b> Scripts ran in 1077.03 seconds <br>
+        <h5> Script Summary </h5>
+        <table class="table table-sm table-bordered summarytable">  
+          <tbody>
+            <tr>
+             
+              
+              <td class="mx-auto">
+              
+              FAILED <br> 2
+              
+              </td>
+              
+              <td class="mx-auto">
+              
+              <div class="mx-auto" >TOTAL<br> 2</div>
+              
+              </td>
+              
+              
+            </tr>
+            </tbody>
+          </table>
+        <h5> Test Steps Summary </h5>
+         <table class="table summarytable table-bordered">  
+          <tbody>
+            <tr>
+     
+          
+          
+          <td>
+          
+          FAILED_STEPS_COUNT <br> 5
+          
+          </td>
+          
+          <td>
+          
+          PASSED_STEPS_COUNT <br> 2
+          
+          </td>
+          
+          <td>
+          
+          ERROR_COUNT <br>1
+          
+          </td>
+          
+          <td>
+          
+          TOTAL<br> 8    
+          
+          </td>
+          
+          
+          </tr>
+            </tbody>
+          </table>
+      </div>
+      <div  class="col-6" id="piechart" ></div>
+    </div>
+    
+ <div class="row">
+ <div class="col-md">
+    
+    <p> <span class="badge badge-pill badge-info">Script Path: </span> C:\Users\kbasavarajap\PycharmProjects\PACE_test\venv
+    </div></div>
+      
+      <div class="row">
+        <div class="col-md">
+          <h4>Results</h4>
+          <table id="example" class="display table resulttable" style="width:100%">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Result</th>
+                <th>Test case ID</th>
+                <th style="width:50%"> Title</th>
+                <th>Duration</th>
+                <th>TestStep Count</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          
+          <h4>Environment</h4>
+          <table class="table table-hover table-sm table-responsive-sm">
+            <tbody>
+              
+              <tr>
+                <td>Python</td>
+                <td>3.7.2</td>
+              </tr>
+              
+              <tr>
+                <td>Platform</td>
+                <td>Windows-10-10.0.18362-SP0</td>
+              </tr>
+              
+              <tr>
+                <td>Packages</td>
+                <td>{'pytest': '5.4.3', 'py': '1.8.1', 'pluggy': '0.13.1'}</td>
+              </tr>
+              
+              <tr>
+                <td>Plugins</td>
+                <td>{'pace': '1.16.15-06-2020', 'metadata': '1.9.0', 'sugar': '0.9.3'}</td>
+              </tr>
+              
+              <tr>
+                <td>Feature</td>
+                <td>Infinera</td>
+              </tr>
+              
+            </tbody>
+          </table>
+          
+        </div>
+      </div>
+      <script>
+        $(document).ready(function () {
+          var table = $('#example').DataTable({
+            "paging": true,
+            "ordering": true,
+            "info": false,
+            "processing": true,
+            select: "single",
+            data: [{'Test': 'THANOS-6972', 'Title': 'Sanity: Create a VM with template1 and configure the DCN IP', 'Result': '<span class ="badge badge-danger">Failed</span>', 'Duration': 924.19, 'Extralog': [{'id': 1, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.utility.environment_cleanup</b>: 25:<pre class="text-justify"><xmp>Executing auto environment cleanup for ./Input...</xmp></pre>'}, {'id': 2, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>root</b>: 473:<pre class="text-justify"><xmp>Initial auto environment cleanup wasn\'t executed as invalid syntax (<string>, line 1)\nContinuing execution...</xmp></pre>'}, {'id': 3, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 56:<pre class="text-justify"><xmp>Connected successfully to \'10.220.160.28\' via SSH</xmp></pre>'}, {'id': 4, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 114:<pre class="text-justify"><xmp>Entered: chassisx.py delete chassis PaceSanity</xmp></pre>'}, {'id': 5, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 132:<pre class="text-justify"><xmp>After Removing ANSIescapeSquence=Linux in-160sim28 4.19.0-8-amd64 #1 SMP Debian 4.19.98-1 (2020-01-26) x86_64\r\n\r\nThe programs included with the Debian GNU/Linux system are free software;\r\nthe exact distribution terms for each program are described in the\r\nindividual files in /usr/share/doc/*/copyright.\r\n\r\nDebian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent\r\npermitted by applicable law.\r\nLast login: Wed Jul  1 15:22:07 2020 from 10.220.116.245\r\r\nchassisx.py delete chassis PaceSanity\r\nkarthik@in-160sim28:~$ chassisx.py delete chassis PaceSanity\r\nfilename for user karthik: /home/karthik/.vm/PaceSanity.txt\r\nline here is PaceSanity_cc1\r\n\r\nDomain PaceSanity_cc1 destroyed\r\n\r\nDomain PaceSanity_cc1 has been undefined\r\n\r\ndeleteing bridges..\r\nsudo ifconfig 3_1aux1 down\r\nsudo brctl delbr 3_1aux1\r\nsudo ifconfig 3_1aux2 down\r\nsudo brctl delbr 3_1aux2\r\nsudo ifconfig 3_craft down\r\n</xmp></pre>'}, {'id': 6, 'scriptlog': '<span class="badge badge-success">PASSED</span>: <b>TestStepVerification</b>: 308: <br><b>sut = \'ThanOSServer_1\' &nbsp;&nbsp;cmd = \'chassisx.py delete chassis PaceSanity\' &nbsp;&nbsp;verification = {Contains: [\'karthik@\']}</b>:<pre class="text-justify"><xmp>Test Step Passed at ..\\..\\..\\python\\python37\\lib\\site-packages\\pace\\neapi\\operations.py 1463 in NE_SSH(),  Message: pytest.evaluate(result)\n\nVariables: \nsut = \'ThanOSServer_1\'\ncmd = \'chassisx.py delete chassis PaceSanity\'\ntoVerify = {<Output.CONTAINS: \'CONTAINS\'>: [\'karthik@\']}\nmodifyOutput = {}\nappId = 1\nwaitTime = 2\nretries = 0\nprompt = None\ninterface = \'NE_SSH\'\nsessionId = \'ThanOSServer_1_OBJ_NE_SSH_1\'\noutputResp = \'Linux in-160sim28 4.19.0-8-amd64 #1 SMP Debian 4.19.98-1 (2020-01-26) x86_64\\r\\n\\r\\nThe programs included with the De...\\nsudo brctl delbr 3_1aux1\\r\\nsudo ifconfig 3_1aux2 down\\r\\nsudo brctl delbr 3_1aux2\\r\\nsudo ifconfig 3_craft down\\r\\n\'\nresult = True</xmp></pre>'}, {'id': 7, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 56:<pre class="text-justify"><xmp>Connected successfully to \'10.220.160.28\' via SSH</xmp></pre>'}, {'id': 8, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 114:<pre class="text-justify"><xmp>Entered: chassisx.py create PaceSanity template0</xmp></pre>'}, {'id': 9, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 132:<pre class="text-justify"><xmp>After Removing ANSIescapeSquence=Linux in-160sim28 4.19.0-8-amd64 #1 SMP Debian 4.19.98-1 (2020-01-26) x86_64\r\n\r\nThe programs included with the Debian GNU/Linux system are free software;\r\nthe exact distribution terms for each program are described in the\r\nindividual files in /usr/share/doc/*/copyright.\r\n\r\nDebian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent\r\npermitted by applicable law.\r\nLast login: Wed Jul  1 15:31:57 2020 from 10.220.116.245\r\r\nchassisx.py create PaceSanity template0\r\nkarthik@in-160sim28:~$ chassisx.py create PaceSanity template0\r\n3 is not in dictionary\r\nfilename for user karthik: /home/karthik/.vm/PaceSanity.txt\r\nid for current vm is: 3\r\nuser path directory made is /home/karthik/.vm_db/db/\r\n/home/karthik/.vm_db/db/PaceSanity_cc1.xml\r\n/home/karthik/.vm_db/db/PaceSanity_cc1.qcow2\r\n</xmp></pre>'}, {'id': 10, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 114:<pre class="text-justify"><xmp>Entered: chassisx.py start chassis PaceSanity</xmp></pre>'}, {'id': 11, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 132:<pre class="text-justify"><xmp>After Removing ANSIescapeSquence=adding bridges..\r\n\r\n\r\nsudo brctl addbr 3v11\r\n\r\n\r\n\r\nsudo brctl addbr 3_1aux1\r\n\r\nsudo brctl addbr 3_1aux2\r\n\r\nsudo brctl addbr 3_craft\r\n\r\nsudo brctl addbr 3v10\r\n\r\nsudo brctl addbr 3m2m\r\n\r\nDomain PaceSanity_cc1 defined from /home/karthik/.vm_db/db/PaceSanity_cc1.xml\r\n\r\nkarthik@in-160sim28:~$ chassisx.py start chassis PaceSanity\r\nfilename for user karthik: /home/karthik/.vm/PaceSanity.txt\r\nid for current vm is: 3\r\nfile /home/karthik/.vm/PaceSanity.txt for current vm exists\r\n\r\n\r\nadding bridges..\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nDomain PaceSanity_cc1 started\r\n\r\nkarthik@in-160sim28:~$ </xmp></pre>'}, {'id': 12, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 56:<pre class="text-justify"><xmp>Connected successfully to \'10.220.160.28\' via SSH</xmp></pre>'}, {'id': 13, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 114:<pre class="text-justify"><xmp>Entered: virsh console PaceSanity_cc1 --force</xmp></pre>'}, {'id': 14, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 132:<pre class="text-justify"><xmp>After Removing ANSIescapeSquence=Linux in-160sim28 4.19.0-8-amd64 #1 SMP Debian 4.19.98-1 (2020-01-26) x86_64\r\n\r\nThe programs included with the Debian GNU/Linux system are free software;\r\nthe exact distribution terms for each program are described in the\r\nindividual files in /usr/share/doc/*/copyright.\r\n\r\nDebian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent\r\npermitted by applicable law.\r\nLast login: Wed Jul  1 15:32:36 2020 from 10.220.116.245\r\r\nvirsh console PaceSanity_cc1 --force\r\nkarthik@in-160sim28:~$ virsh console PaceSanity_cc1 --force\r\nConnected to domain PaceSanity_cc1\r\nEscape character is ^]\r\n</xmp></pre>'}, {'id': 15, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 114:<pre class="text-justify"><xmp>Entered: </xmp></pre>'}, {'id': 16, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 132:<pre class="text-justify"><xmp>After Removing ANSIescapeSquence=\r\r\nlocalhost login: </xmp></pre>'}, {'id': 17, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 114:<pre class="text-justify"><xmp>Entered: </xmp></pre>'}, {'id': 18, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 132:<pre class="text-justify"><xmp>After Removing ANSIescapeSquence=\r\nkarthik@in-160sim28:~$ </xmp></pre>'}, {'id': 19, 'scriptlog': '<span class="badge badge-danger">ERROR</span>: <b>TestStepVerification</b>: 301: <br><b>sut = \'ThanOSServer_1\' &nbsp;&nbsp;cmd = \'\' &nbsp;&nbsp;verification = {Contains: [\'localhost login:\']}</b>:<pre class="text-justify"><xmp>Test Step Failed at "..\\..\\..\\python\\python37\\lib\\site-packages\\pace\\neapi\\operations.py 1463" in function:NE_SSH(), ErrorMessage: pytest.evaluate(result)\n\nVariables: \nsut = \'ThanOSServer_1\'\ncmd = \'\'\ntoVerify = {<Output.CONTAINS: \'CONTAINS\'>: [\'localhost login:\']}\nmodifyOutput = {}\nappId = \'setup\'\nwaitTime = 2\nretries = 0\nprompt = None\ninterface = \'NE_SSH\'\nsessionId = \'ThanOSServer_1_OBJ_NE_SSH_setup\'\noutputResp = \'\\r\\nkarthik@in-160sim28:~$ \'\nresult = False</xmp></pre>'}, {'id': 20, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 114:<pre class="text-justify"><xmp>Entered: root</xmp></pre>'}, {'id': 21, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 132:<pre class="text-justify"><xmp>After Removing ANSIescapeSquence=root\r\n-bash: root: command not found\r\nkarthik@in-160sim28:~$ </xmp></pre>'}, {'id': 22, 'scriptlog': '<span class="badge badge-danger">ERROR</span>: <b>TestStepVerification</b>: 301: <br><b>sut = \'ThanOSServer_1\' &nbsp;&nbsp;cmd = \'root\' &nbsp;&nbsp;verification = {Contains: [\'Password:\']}</b>:<pre class="text-justify"><xmp>Test Step Failed at "..\\..\\..\\python\\python37\\lib\\site-packages\\pace\\neapi\\operations.py 1463" in function:NE_SSH(), ErrorMessage: pytest.evaluate(result)\n\nVariables: \nsut = \'ThanOSServer_1\'\ncmd = \'root\'\ntoVerify = {<Output.CONTAINS: \'CONTAINS\'>: [\'Password:\']}\nmodifyOutput = {}\nappId = \'setup\'\nwaitTime = 2\nretries = 0\nprompt = None\ninterface = \'NE_SSH\'\nsessionId = \'ThanOSServer_1_OBJ_NE_SSH_setup\'\noutputResp = \'root\\r\\n-bash: root: command not found\\r\\nkarthik@in-160sim28:~$ \'\nresult = False</xmp></pre>'}, {'id': 23, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 114:<pre class="text-justify"><xmp>Entered: onl</xmp></pre>'}, {'id': 24, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 132:<pre class="text-justify"><xmp>After Removing ANSIescapeSquence=onl\r\n-bash: onl: command not found\r\nkarthik@in-160sim28:~$ </xmp></pre>'}, {'id': 25, 'scriptlog': '<span class="badge badge-danger">ERROR</span>: <b>TestStepVerification</b>: 301: <br><b>sut = \'ThanOSServer_1\' &nbsp;&nbsp;cmd = \'onl\' &nbsp;&nbsp;verification = {Contains: [\'root@localhost:~#\']}</b>:<pre class="text-justify"><xmp>Test Step Failed at "..\\..\\..\\python\\python37\\lib\\site-packages\\pace\\neapi\\operations.py 1463" in function:NE_SSH(), ErrorMessage: pytest.evaluate(result)\n\nVariables: \nsut = \'ThanOSServer_1\'\ncmd = \'onl\'\ntoVerify = {<Output.CONTAINS: \'CONTAINS\'>: [\'root@localhost:~#\']}\nmodifyOutput = {}\nappId = \'setup\'\nwaitTime = 2\nretries = 0\nprompt = None\ninterface = \'NE_SSH\'\nsessionId = \'ThanOSServer_1_OBJ_NE_SSH_setup\'\noutputResp = \'onl\\r\\n-bash: onl: command not found\\r\\nkarthik@in-160sim28:~$ \'\nresult = False</xmp></pre>'}, {'id': 26, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 114:<pre class="text-justify"><xmp>Entered: ifconfig DCN 172.16.11.196 netmask 255.255.255.224 up</xmp></pre>'}, {'id': 27, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 132:<pre class="text-justify"><xmp>After Removing ANSIescapeSquence=ifconfig DCN 172.16.11.196 netmask 255.255.255.224 up\r\nSIOCSIFADDR: Operation not permitted\r\nDCN: ERROR while getting interface flags: No such device\r\nSIOCSIFNETMASK: Operation not permitted\r\nDCN: ERROR while getting interface flags: No such device\r\nkarthik@in-160sim28:~$ </xmp></pre>'}, {'id': 28, 'scriptlog': '<span class="badge badge-danger">ERROR</span>: <b>TestStepVerification</b>: 301: <br><b>sut = \'ThanOSServer_1\' &nbsp;&nbsp;cmd = \'ifconfig DCN 172.16.11.196 netmask 255.255.255.224 up\' &nbsp;&nbsp;verification = {Contains: [\'root@localhost:~#\']}</b>:<pre class="text-justify"><xmp>Test Step Failed at "..\\..\\..\\python\\python37\\lib\\site-packages\\pace\\neapi\\operations.py 1463" in function:NE_SSH(), ErrorMessage: pytest.evaluate(result)\n\nVariables: \nsut = \'ThanOSServer_1\'\ncmd = \'ifconfig DCN 172.16.11.196 netmask 255.255.255.224 up\'\ntoVerify = {<Output.CONTAINS: \'CONTAINS\'>: [\'root@localhost:~#\']}\nmodifyOutput = {}\nappId = \'setup\'\nwaitTime = 2\nretries = 0\nprompt = None\ninterface = \'NE_SSH\'\nsessionId = \'ThanOSServer_1_OBJ_NE_SSH_setup\'\noutputResp = \'ifconfig DCN 172.16.11.196 netmask 255.255.255.224 up\\r\\nSIOCSIFADDR: Operation not permitted\\r\\nDCN: ERROR while get...ETMASK: Operation not permitted\\r\\nDCN: ERROR while getting interface flags: No such device\\r\\nkarthik@in-160sim28:~$ \'\nresult = False</xmp></pre>'}, {'id': 29, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 114:<pre class="text-justify"><xmp>Entered: route add default gw 172.16.11.193</xmp></pre>'}, {'id': 30, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 132:<pre class="text-justify"><xmp>After Removing ANSIescapeSquence=route add default gw 172.16.11.193\r\nSIOCADDRT: Operation not permitted\r\nkarthik@in-160sim28:~$ </xmp></pre>'}, {'id': 31, 'scriptlog': '<span class="badge badge-danger">ERROR</span>: <b>TestStepVerification</b>: 301: <br><b>sut = \'ThanOSServer_1\' &nbsp;&nbsp;cmd = \'route add default gw 172.16.11.193\' &nbsp;&nbsp;verification = {Contains: [\'root@localhost:~#\']}</b>:<pre class="text-justify"><xmp>Test Step Failed at "..\\..\\..\\python\\python37\\lib\\site-packages\\pace\\neapi\\operations.py 1463" in function:NE_SSH(), ErrorMessage: pytest.evaluate(result)\n\nVariables: \nsut = \'ThanOSServer_1\'\ncmd = \'route add default gw 172.16.11.193\'\ntoVerify = {<Output.CONTAINS: \'CONTAINS\'>: [\'root@localhost:~#\']}\nmodifyOutput = {}\nappId = \'setup\'\nwaitTime = 2\nretries = 0\nprompt = None\ninterface = \'NE_SSH\'\nsessionId = \'ThanOSServer_1_OBJ_NE_SSH_setup\'\noutputResp = \'route add default gw 172.16.11.193\\r\\nSIOCADDRT: Operation not permitted\\r\\nkarthik@in-160sim28:~$ \'\nresult = False</xmp></pre>'}, {'id': 32, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 114:<pre class="text-justify"><xmp>Entered: exit -f</xmp></pre>'}, {'id': 33, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 132:<pre class="text-justify"><xmp>After Removing ANSIescapeSquence=exit -f\r\nlogout\r\n-bash: exit: -f: numeric argument required\r\n</xmp></pre>'}, {'id': 34, 'scriptlog': '<span class="badge badge-Light">DEBUG</span>: <b>pace.sessions.ssh</b>: 108:<pre class="text-justify"><xmp>Socket is closed</xmp></pre>'}, {'id': 35, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 114:<pre class="text-justify"><xmp>Entered: exit -f</xmp></pre>'}, {'id': 36, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 132:<pre class="text-justify"><xmp>After Removing ANSIescapeSquence=Last login: Wed Jul  1 15:44:53 2020 from 10.220.116.149\r\r\nexit -f\r\n\r\nkarthik@in-160sim28:~$ exit -f\r\nlogout\r\n-bash: exit: -f: numeric argument required\r\n</xmp></pre>'}, {'id': 37, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>root</b>: 489:<pre class="text-justify"><xmp>Final auto environment cleanup skipped</xmp></pre>'}, {'id': 38, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.utility.pacedb</b>: 135:<pre class="text-justify"><xmp>getPurposeName called</xmp></pre>'}, {'id': 39, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.utility.pacedb</b>: 142:<pre class="text-justify"><xmp>Exception in getPurposeName</xmp></pre>'}, {'id': 40, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.utility.pacedb</b>: 143:<pre class="text-justify"><xmp>1054 (42S22): Unknown column \'None\' in \'where clause\'</xmp></pre>'}, {'id': 41, 'scriptlog': '<span class ="badge badge-info">STDOUT:</span> <div style="white-space: pre-wrap;"><pre>reading data from socket..!\nreading data from socket..!\nreading data from socket..!\nsocket not ready.. wait for 1 sec\nreading data from socket..!\nsocket not ready.. wait for 1 sec\nreading data from socket..!\nsocket not ready.. wait for 1 sec\nreading data from socket..!\nsocket not ready.. wait for 1 sec\nreading data from socket..!\nsocket not ready.. wait for 1 sec\nreading data from socket..!\nsocket not ready.. wait for 1 sec\nreading data from socket..!\nsocket not ready.. wait for 1 sec\nConnected to VM\nreading data from socket..!\nsocket not ready.. wait for 1 sec\nreading data from socket..!\nsocket not ready.. wait for 1 sec\nreading data from socket..!\nsocket not ready.. wait for 1 sec\nreading data from socket..!\nsocket not ready.. wait for 1 sec\n************************ tear down in plugin******************************\n</pre>'}], 'TestStepsCount': '<span class ="badge badge-primary"> Total: 6</span> <span class ="badge badge-success"> Pass: 1</span> <span class ="badge badge-danger"> Fail: 5</span> '}, {'Test': 'THANOS-6429', 'Title': 'Sanity: SW build Download and Fresh Installation ', 'Result': '<span class ="badge badge-danger">Failed</span>', 'Duration': 144.28, 'Extralog': [{'id': 1, 'scriptlog': '<span class ="badge badge-danger">Exception:</span> \n                <div class="card border-danger">\n                <div class="card-body text-danger">\n                    <pre class="card-text">""{"path": "c:\\\\users\\\\kbasavarajap\\\\python\\\\python37\\\\lib\\\\site-packages\\\\pace\\\\sessions\\\\ssh.py", "lineno": 62, "message": "Exception: SSH connection to \'172.16.11.196\' failed:\'NoneType\' object has no attribute \'open_session\'"}self = <pace.sessions.ssh.InfnSSH object at 0x000001875A5918D0>\n\n    def __connect_session(self):\n    \n        try:\n            # paramiko.common.logging.basicConfig(level=paramiko.common.DEBUG)\n            self.ssh = paramiko.SSHClient()\n            self.ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())\n    \n            try:\n                self.ssh.connect(self.ip, port=self.port, username=self.user, password=self.passwd, look_for_keys=False)\n    \n            except Exception as e:\n                if \'Authentication failed\' in str(e):\n                    try:  # try with default password\n                        self.ssh.connect(self.ip, port=self.port, username=self.user, password=\'Infinera1\',\n                                         look_for_keys=False)\n                    except Exception as e:\n                        raise Exception(\n                            "SSH connection to \'%s\' failed:%s" % (self.ip, str(e)))\n    \n            self.logger.info(\n                "Connected successfully to \'%s\' via SSH" % self.ip)\n            time.sleep(5)\n            ### Jira PACE-11 issue. Increasing the shell size\n>           self.shell = self.ssh.invoke_shell(width=99999, height=99999)\n\n..\\..\\..\\python\\python37\\lib\\site-packages\\pace\\sessions\\ssh.py:59: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <paramiko.client.SSHClient object at 0x000001875A5917F0>, term = \'vt100\', width = 99999, height = 99999, width_pixels = 0, height_pixels = 0\nenvironment = None\n\n    def invoke_shell(\n        self,\n        term="vt100",\n        width=80,\n        height=24,\n        width_pixels=0,\n        height_pixels=0,\n        environment=None,\n    ):\n        """\n        Start an interactive shell session on the SSH server.  A new `.Channel`\n        is opened and connected to a pseudo-terminal using the requested\n        terminal type and size.\n    \n        :param str term:\n            the terminal type to emulate (for example, ``"vt100"``)\n        :param int width: the width (in characters) of the terminal window\n        :param int height: the height (in characters) of the terminal window\n        :param int width_pixels: the width (in pixels) of the terminal window\n        :param int height_pixels: the height (in pixels) of the terminal window\n        :param dict environment: the command\'s environment\n        :return: a new `.Channel` connected to the remote shell\n    \n        :raises: `.SSHException` -- if the server fails to invoke a shell\n        """\n>       chan = self._transport.open_session()\nE       AttributeError: \'NoneType\' object has no attribute \'open_session\'\n\n..\\..\\..\\python\\python37\\lib\\site-packages\\paramiko\\client.py:545: AttributeError\n\nDuring handling of the above exception, another exception occurred:\n\ncheck_system_reachability = None\n\n    def test_JIRA_THANOS_6429(check_system_reachability):\n    \n        """ Image installation via CLI and configuring DCN IP via CLI"""\n    \n        #1. Dowloads build from artifactory location to thanos-server\n        #2. Downloads the image to the NE via CLI Interface via SFTP Protocol\n        #3. Installs image on the chassis\n        #4. Verify that the pre-upgrade went fine.\n        #5. Activates the newly downloaded software.\n        #6. Waits for 300 seconds for activation to complete.\n        #7. Once installation is done, Script connects to the console of the VM and login to the CLI Interface and perform DCN IP configuration.\n        #8. Verfies whether the image has been installed from the CLI interface.\n    \n        if str ( SetupConfig.getSetupEnvDict ( )["Common"]["Variables"][\n                     "DownloadImageFromArtifactory"] ).upper ( ) == "TRUE":\n    \n            artifactory_path = SetupConfig.getSetupEnvDict ( ).get ( "Common" ).get ( "Variables" ).get ( "ArtifactoryPath",\n                                                                                                          None )\n    \n            software_image.download_image_from_artifactory ( thanos_server="ThanOSServer_1",\n                                                             artifactory_path=artifactory_path, local_download_path=\n                                                             SetupConfig.getSetupEnvDict ( )["ThanOSServer_1"]["Global"][\n                                                                 "BuildPath"] )\n            logger.info(\'Done downloading build to Sim server\')\n        else:\n    \n            #TODO : Plugin API to download image from other server and update image Name and image_verification file\n            # Added this for CI Sanity to proceed\n            logger.debug("Intentionally failing this now.. Need to be removed once TODO is completed")\n            pytest.evaluate(False)\n    \n        software_image.download(file_transfer_mode="sftp",image_location_details={"username"    :  SetupConfig.getSetupEnvDict()["ThanOSServer_1"]["Login"]["UserName"],\n                                                                                  "password"    :  SetupConfig.getSetupEnvDict()["ThanOSServer_1"]["Login"]["Password"],\n                                                                                  "ServerIP"    :  SetupConfig.getSetupEnvDict()["ThanOSServer_1"]["Login"]["IpAddress"],\n>                                                                                 "path"        :  SetupConfig.getSetupEnvDict()["ThanOSServer_1"]["Global"]["BuildPath"],},wait_time=240)\n\ntest.py:125: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n..\\..\\..\\Python\\Python37\\Lib\\pacelib\\SW\\SW.py:81: in download\n    CLI(sut=self.sut, cmd=download_cmd, appId=appId)\n..\\..\\..\\python\\python37\\lib\\site-packages\\pace\\neapi\\operations.py:1346: in CLI\n    interfaceToTest=interface, server=None).sendcmd(cmd,delay=waitTime))\n..\\..\\..\\python\\python37\\lib\\site-packages\\pace\\buffandsessmgmt\\manager.py:120: in getSession\n    passwd=neDetailsDict.get("Login").get("Password"))\n..\\..\\..\\python\\python37\\lib\\site-packages\\pace\\sessions\\cli.py:23: in __init__\n    self.__connect()\n..\\..\\..\\python\\python37\\lib\\site-packages\\pace\\sessions\\cli.py:29: in __connect\n    passwd=self.passwd, devicetype=self.devicetype, logger=self.logger)\n..\\..\\..\\python\\python37\\lib\\site-packages\\pace\\sessions\\ssh.py:30: in __init__\n    self.__connect_session()\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <pace.sessions.ssh.InfnSSH object at 0x000001875A5918D0>\n\n    def __connect_session(self):\n    \n        try:\n            # paramiko.common.logging.basicConfig(level=paramiko.common.DEBUG)\n            self.ssh = paramiko.SSHClient()\n            self.ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())\n    \n            try:\n                self.ssh.connect(self.ip, port=self.port, username=self.user, password=self.passwd, look_for_keys=False)\n    \n            except Exception as e:\n                if \'Authentication failed\' in str(e):\n                    try:  # try with default password\n                        self.ssh.connect(self.ip, port=self.port, username=self.user, password=\'Infinera1\',\n                                         look_for_keys=False)\n                    except Exception as e:\n                        raise Exception(\n                            "SSH connection to \'%s\' failed:%s" % (self.ip, str(e)))\n    \n            self.logger.info(\n                "Connected successfully to \'%s\' via SSH" % self.ip)\n            time.sleep(5)\n            ### Jira PACE-11 issue. Increasing the shell size\n            self.shell = self.ssh.invoke_shell(width=99999, height=99999)\n            self.shell.keep_this = self.ssh\n        except Exception as e:\n>           raise Exception("SSH connection to \'%s\' failed:%s" % (self.ip, str(e)))\nE           Exception: SSH connection to \'172.16.11.196\' failed:\'NoneType\' object has no attribute \'open_session\'\n\n..\\..\\..\\python\\python37\\lib\\site-packages\\pace\\sessions\\ssh.py:62: Exception""</pre>\n                </div>\n                </div>'}, {'id': 2, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.utility.environment_cleanup</b>: 25:<pre class="text-justify"><xmp>Executing auto environment cleanup for ./Input...</xmp></pre>'}, {'id': 3, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>root</b>: 473:<pre class="text-justify"><xmp>Initial auto environment cleanup wasn\'t executed as invalid syntax (<string>, line 1)\nContinuing execution...</xmp></pre>'}, {'id': 4, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.utility.parser</b>: 185:<pre class="text-justify"><xmp>System reachable in first attempt..!!</xmp></pre>'}, {'id': 5, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 56:<pre class="text-justify"><xmp>Connected successfully to \'10.220.160.28\' via SSH</xmp></pre>'}, {'id': 6, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 114:<pre class="text-justify"><xmp>Entered: cd /home/karthik/LatestBuildFromArtifactory</xmp></pre>'}, {'id': 7, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 132:<pre class="text-justify"><xmp>After Removing ANSIescapeSquence=Linux in-160sim28 4.19.0-8-amd64 #1 SMP Debian 4.19.98-1 (2020-01-26) x86_64\r\n\r\nThe programs included with the Debian GNU/Linux system are free software;\r\nthe exact distribution terms for each program are described in the\r\nindividual files in /usr/share/doc/*/copyright.\r\n\r\nDebian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent\r\npermitted by applicable law.\r\nLast login: Wed Jul  1 15:47:12 2020 from 10.220.116.245\r\r\ncd /home/karthik/LatestBuildFromArtifactory\r\nkarthik@in-160sim28:~$ cd /home/karthik/LatestBuildFromArtifactory\r\nkarthik@in-160sim28:~/LatestBuildFromArtifactory$ </xmp></pre>'}, {'id': 8, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 114:<pre class="text-justify"><xmp>Entered: rm -rf *</xmp></pre>'}, {'id': 9, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 132:<pre class="text-justify"><xmp>After Removing ANSIescapeSquence=rm -rf *\r\nkarthik@in-160sim28:~/LatestBuildFromArtifactory$ </xmp></pre>'}, {'id': 10, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 114:<pre class="text-justify"><xmp>Entered: wget --no-verbose --no-parent --recursive --level=1 --no-directories --user=anonymous --password=anonymous https://iartifactory.infinera.com/artifactory/thanos/chassisx-nightly/chassisx-628/sim/</xmp></pre>'}, {'id': 11, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 132:<pre class="text-justify"><xmp>After Removing ANSIescapeSquence=wget --no-verbose --no-parent --recursive --level=1 --no-directories --user=anonymous --password=anonymous https://iartifactory.infinera.com/artifactory/thanos/chassisx-nightly/chassisx-628/sim/\r\n</xmp></pre>'}, {'id': 12, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 56:<pre class="text-justify"><xmp>Connected successfully to \'10.220.160.28\' via SSH</xmp></pre>'}, {'id': 13, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 114:<pre class="text-justify"><xmp>Entered: cd /home/karthik/LatestBuildFromArtifactory</xmp></pre>'}, {'id': 14, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 132:<pre class="text-justify"><xmp>After Removing ANSIescapeSquence=Linux in-160sim28 4.19.0-8-amd64 #1 SMP Debian 4.19.98-1 (2020-01-26) x86_64\r\n\r\nThe programs included with the Debian GNU/Linux system are free software;\r\nthe exact distribution terms for each program are described in the\r\nindividual files in /usr/share/doc/*/copyright.\r\n\r\nDebian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent\r\npermitted by applicable law.\r\nLast login: Wed Jul  1 15:47:25 2020 from 10.220.116.245\r\r\ncd /home/karthik/LatestBuildFromArtifactory\r\nkarthik@in-160sim28:~$ cd /home/karthik/LatestBuildFromArtifactory\r\nkarthik@in-160sim28:~/LatestBuildFromArtifactory$ </xmp></pre>'}, {'id': 15, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 114:<pre class="text-justify"><xmp>Entered: ls -lrt</xmp></pre>'}, {'id': 16, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.ssh</b>: 132:<pre class="text-justify"><xmp>After Removing ANSIescapeSquence=ls -lrt\r\ntotal 2349544\r\n-rw-r--r-- 1 karthik karthik  763895072 Jun 30 21:17 th-xmm4-sim-2020-06-30-nightly-R1.0.0.628.bin\r\n-rw-r--r-- 1 karthik karthik  396975392 Jun 30 21:18 th-chm6-sim-2020-06-30-nightly-R1.0.0.628.bin\r\n-rw-r--r-- 1 karthik karthik 1158715244 Jun 30 21:18 ThanOS-F1.0-Main-nightly-2020.06.30_15_10.tar.gz\r\n-rw-r--r-- 1 karthik karthik        380 Jun 30 21:19 ThanOS-F1.0-Main-nightly-2020.06.30_15_10.manifest\r\n-rw-r--r-- 1 karthik karthik   86325772 Jun 30 21:19 chm6_thanos_sim_x86_64_pkg_tar.gz\r\n-rw-r--r-- 1 karthik karthik       1162 Jul  1 15:47 index.html\r\nkarthik@in-160sim28:~/LatestBuildFromArtifactory$ </xmp></pre>'}, {'id': 17, 'scriptlog': '<span class="badge badge-success">PASSED</span>: <b>TestStepVerification</b>: 308: <br><b>sut = \'ThanOSServer_1\' &nbsp;&nbsp;cmd = \'ls -lrt\' &nbsp;&nbsp;verification = {Contains: [\'manifest\', \'tar.gz\']}</b>:<pre class="text-justify"><xmp>Test Step Passed at ..\\..\\..\\python\\python37\\lib\\site-packages\\pace\\neapi\\operations.py 1463 in NE_SSH(),  Message: pytest.evaluate(result)\n\nVariables: \nsut = \'ThanOSServer_1\'\ncmd = \'ls -lrt\'\ntoVerify = {<Output.CONTAINS: \'CONTAINS\'>: [\'manifest\', \'tar.gz\']}\nmodifyOutput = {}\nappId = \'parse\'\nwaitTime = 2\nretries = 0\nprompt = None\ninterface = \'NE_SSH\'\nsessionId = \'ThanOSServer_1_OBJ_NE_SSH_parse\'\noutputResp = \'ls -lrt\\r\\ntotal 2349544\\r\\n-rw-r--r-- 1 karthik karthik  763895072 Jun 30 21:17 th-xmm4-sim-2020-06-30-nightly-R1.0....n-rw-r--r-- 1 karthik karthik       1162 Jul  1 15:47 index.html\\r\\nkarthik@in-160sim28:~/LatestBuildFromArtifactory$ \'\nresult = True</xmp></pre>'}, {'id': 18, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.neapi.operations</b>: 363:<pre class="text-justify"><xmp>Done downloading build to Sim server.</xmp></pre>'}, {'id': 19, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.neapi.operations</b>: 114:<pre class="text-justify"><xmp>Done downloading build to Sim server</xmp></pre>'}, {'id': 20, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.sessions.cli</b>: 56:<pre class="text-justify"><xmp>Connected successfully to \'172.16.11.196\' via SSH</xmp></pre>'}, {'id': 21, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>root</b>: 489:<pre class="text-justify"><xmp>Final auto environment cleanup skipped</xmp></pre>'}, {'id': 22, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.utility.pacedb</b>: 135:<pre class="text-justify"><xmp>getPurposeName called</xmp></pre>'}, {'id': 23, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.utility.pacedb</b>: 142:<pre class="text-justify"><xmp>Exception in getPurposeName</xmp></pre>'}, {'id': 24, 'scriptlog': '<span class="badge badge-Light">INFO</span>: <b>pace.utility.pacedb</b>: 143:<pre class="text-justify"><xmp>1054 (42S22): Unknown column \'None\' in \'where clause\'</xmp></pre>'}, {'id': 25, 'scriptlog': '<span class ="badge badge-info">STDOUT:</span> <div style="white-space: pre-wrap;"><pre>\r\nPinging 172.16.11.196 with 32 bytes of data:\r\nReply from 10.220.160.28: Destination host unreachable.\r\n\r\nPing statistics for 172.16.11.196:\r\n    Packets: Sent = 1, Received = 1, Lost = 0 (0% loss),\r\nreading data from socket..!\nsocket not ready.. wait for 1 sec\nreading data from socket..!\nsocket not ready.. wait for 1 sec\nreading data from socket..!\nsocket not ready.. wait for 1 sec\nreading data from socket..!\nsocket not ready.. wait for 1 sec\nreading data from socket..!\nsocket not ready.. wait for 1 sec\n************************ tear down in plugin******************************\n</pre>'}], 'TestStepsCount': '<span class ="badge badge-primary"> Total: 2</span> <span class ="badge badge-success"> Pass: 1</span> <span class ="badge badge-danger"> Error: 1</span> '}] ,
+            "columns": [{
+                "className": 'details-control',
+                "orderable": false,
+                "data": null,
+                "defaultContent": '',
+                "render": function () {
+                  return '<i class="fa fa-plus-square" aria-hidden="true"></i>';
+                },
+                width: "15px"
+              },
+              {
+                "data": "Result"
+              },
+              {
+                "data": "Test"
+              },
+              {
+                "data": "Title"
+              },
+              {
+                "data": "Duration"
+              },
+              {
+                "data": "TestStepsCount"
+              }
+            ],
+            "order": [
+              [1, 'asc']
+            ]
+          });
+
+
+          // Add event listener for opening and closing details
+          $('#example tbody').on('click', 'td.details-control', function () {
+            var tr = $(this).closest('tr');
+            var tdi = tr.find("i.fa");
+            var row = table.row(tr);
+
+            if (row.child.isShown()) {
+              // This row is already open - close it
+              row.child.hide();
+			  destroyChild(row);
+              tr.removeClass('shown');			  
+              tdi.first().removeClass('fa-minus-square');
+              tdi.first().addClass('fa-plus-square');
+            } else {
+              // Open this row
+              //row.child(format(row.data())).show();
+			  createChild(row,format(row.data()));
+              tr.addClass('shown');
+              tdi.first().removeClass('fa-plus-square');
+              tdi.first().addClass('fa-minus-square');
+            }
+          });
+
+          table.on("user-select", function (e, dt, type, cell, originalEvent) {
+            if ($(cell.node()).hasClass("details-control")) {
+              e.preventDefault();
+            }
+          });
+        });
+
+        function format(d) {
+
+          // `d` is the original data object for the row
+          return d.Extralog;
+        }
+		function createChild(row,d) {
+		
+			var rowData = row.data();
+
+			// This is the table we'll convert into a DataTable
+			var table = $('<table class="display" width="95%"/>');
+
+			// Display it the child row
+			row.child(table).show();
+
+
+			// Child row DataTable configuration, always passes the parent row's id to server
+			var usersTable = table.DataTable({
+				"lengthMenu": [10, 25, 50, 100,500,1000],
+				filter: true,		
+				data:d,
+				columns: [
+					{ title: "id", data: "id" },
+					{ title: "ScriptLog", data: "scriptlog" }						
+				],
+				"columnDefs": [
+				{ "width": "5%", "targets": 0 }],
+				select: true,		
+			});
+
+			// On change, update the content of the parent table's host row
+			// This isn't particularly efficient as it requires the child row
+			// to be regenerated once the main table has been reloaded. A
+			// better method would be to query the data for the new user counts
+			// and update each existing row, but that is beyond the scope of
+			// this post.
+			/*usersEditor.on( 'submitSuccess', function (e, json, data, action) {
+				row.ajax.reload(function () {
+					$(row.cell( row.id(true), 0 ).node()).click();
+				});
+			} );*/
+		}
+	
+		function destroyChild(row) {
+			// Remove and destroy the DataTable in the child row
+			var table = $("table", row.child());
+			table.detach();
+			table.DataTable().destroy();
+
+			// And then hide the row
+			row.child.hide();
+		}
+
+      </script>
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Result');
+        data.addColumn('number', 'Percentage');
+        data.addRows([
+                 
+                  
+                    ["failed",2],
+                  
+                  
+                  
+                  
+                ]);       
+   
+        data.sort([{column: 1, desc: true}]);
+        var colors = {
+            'passed': 'green',
+            'failed': 'red',
+            'xfailed': '#a8232e',
+            'xpassed': '#32aa0d',
+            'error' : '#960000',
+            'skipped' : '#ffff00',
+          };
+        var slices = [];
+        for (var i = 0; i < data.getNumberOfRows(); i++) {
+          slices.push({
+            color: colors[data.getValue(i, 0)]
+          });
+        }
+
+      var options = {
+        hAxis: {title: 'Year', titleTextStyle: {color: 'red'}},
+        pieSliceText: 'label',
+        pieStartAngle: 100,
+        
+      };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+        chart.draw(data,{slices: slices}, options);
+      }
+    </script>
+</body>
+
+</html>

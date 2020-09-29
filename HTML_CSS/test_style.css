@@ -1,0 +1,59 @@
+html{
+background-color:   #f0f306  ;
+background-size : 2000px;
+background-position : top center
+background-repeat:no-repeat;
+scroll-behaviour: smooth;
+}
+
+h2{
+font-size:28px;
+color :  #cd9e14 ;
+}
+
+/*p{
+background-color :  #0d2946 ;
+color: rgba(170,220,14,0.5) ;
+font : status-bar;
+
+}
+*/
+
+.two{
+color:yellow;
+background-color:orange;
+text-transform:uppercase;
+}
+
+pre{
+background-color:rgba(14,220,36,0.5);
+}
+li{
+
+list-style-type : "->"
+}
+table{
+width = 800px;
+
+}
+/*th{
+    background-color:red;
+    color:black;
+    font-family: 'Libre Franklin', sans-serif;
+    }
+th, td{
+padding: 5px;
+text-align:center;
+border : 5px solid rgba(14,220,36,0.5);
+border-radius:100px 100px;
+font-family:fantasy;
+
+}
+
+th:hover{
+background-color:blue;
+color:white;
+font-size:3em;
+
+}
+*/

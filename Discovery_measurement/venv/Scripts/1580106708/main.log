@@ -1,0 +1,369 @@
+2020-01-27 12:01:48,229 - __main__ - INFO - config file found
+2020-01-27 12:01:48,240 - __main__ - INFO - Successfully read config data
+2020-01-27 12:01:48,240 - __main__ - INFO - Shutting down DNA
+2020-01-27 12:02:24,375 - __main__ - INFO - 2020-01-27 12:02:24.375077
+2020-01-27 12:03:25,031 - __main__ - INFO - Warm Starting DNA
+2020-01-27 12:11:00,238 - __main__ - INFO - Stopping Elasticsearch.
+Stopping Logstash.
+Stopping Nginx.
+
+
+Process :   Elasticsearch Server          [Stopped]
+
+
+DNA Server Shutdown successful...
+
+++++++++++++ Infinera DNA Component Version ++++++++++++
+
+   EMS Server Version: EMS_20.1.0 Build#: M20.1.0.1135
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+No duplicate entries in ems.conf
+Verifying ems.conf for DNA server
+WARNING:There are some warnings while verifying  ems.conf...
+Verifying ORACLE parameters ...
+2020-01-27 06:35:21,965 DB Server IP is : 10.220.5.169
+2020-01-27 06:35:22,167 DBProperties : DB Server URL is : jdbc:oracle:thin:@10.220.5.169:1521/emsdb
+2020-01-27 06:35:22,167 DBProperties : DB Driver Name is : oracle.jdbc.OracleDriver
+2020-01-27 06:35:22,581 DB Server IP is : 10.220.5.169
+2020-01-27 06:35:22,581 Formatted IP  : 10.220.5.169
+2020-01-27 06:35:22,581 OracleDBVerifier : DB Server URL is : jdbc:oracle:thin:@10.220.5.169:1521/emsdb
+2020-01-27 06:35:23,486 Oracle version has been gotten
+2020-01-27 06:35:23,563 Oracle DB CHARACTERSET information has been gotten
+2020-01-27 06:35:24,087 Database Health Checker : There are no DB Structure Integrity Issues Found.
+WARNING:There are some warnings while verifying ORACLE parameter
+Verification reports are stored in /u01/LNWDNA20.0/DNA/EMS/verify_output/VerificationReport.out
+2020-01-27 06:35:24,908 multihome IP = 10.220.5.169
+2020-01-27 06:35:25,023 Uncompressed Address : 10.220.5.169
+2020-01-27 06:35:25,023 Compressed Address : 10.220.5.169
+2020-01-27 06:35:25,034 DB Server IP is : 10.220.5.169
+2020-01-27 06:35:25,037 DBProperties : DB Server URL is : jdbc:oracle:thin:@10.220.5.169:1521/emsdb
+2020-01-27 06:35:25,037 DBProperties : DB Driver Name is : oracle.jdbc.OracleDriver
+2020-01-27 06:35:25,411 No. of CPU(s) : 24
+2020-01-27 06:35:25,411 Deep Discovery Min Threads: 30
+2020-01-27 06:35:25,411 Deep Discovery Max Threads: 32
+2020-01-27 06:35:25,435 SSL is ENABLED , set CLIENT_SERVER to SSL
+2020-01-27 06:35:26,501 No. of CPU(s) : 24
+2020-01-27 06:35:26,501 Deep Discovery Min Threads: 30
+2020-01-27 06:35:26,501 Deep Discovery Max Threads: 32
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/u01/LNWDNA20.0/DNA/EMS/classes/external/server/slf4j-log4j12-1.6.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/u01/LNWDNA20.0/DNA/EMS/classes/external/common/activemq.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+log4j:WARN No such property [maxHistory] in org.apache.log4j.RollingFileAppender.
+log4j:WARN No such property [maxHistory] in org.apache.log4j.RollingFileAppender.
+log4j:WARN No such property [maxHistory] in org.apache.log4j.RollingFileAppender.
+2020-01-27 06:35:29,638 Launching EMS Server in WarmStart Mode
+Jan 27, 2020 6:35:29 AM com.infinera.nm.ems.server.tools.EvaluateCiphers getVulnerableCiphersFromConfFile
+SEVERE: Vulnerable ciphers listed in :/u01/LNWDNA20.0/DNA/EMS//conf/ssl/unsupportedciphers.conf:#DNA supports all the ciphers supported by JRE for communication between DNA server and client.,#But some of those ciphers are vulnerable to attacks. This file lists cipher suites for which the support is removed from DNA because of vulnerability.,,#Following algorithms are vulnerable to SWEET32 attack. More info on this at:https://sweet32.info/,TLS_ECDHE_ECDSA_WITH_3DES_EDE_CBC_SHA,TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA,SSL_RSA_WITH_3DES_EDE_CBC_SHA,TLS_ECDH_ECDSA_WITH_3DES_EDE_CBC_SHA,TLS_ECDH_RSA_WITH_3DES_EDE_CBC_SHA,SSL_DHE_RSA_WITH_3DES_EDE_CBC_SHA,SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA,SSL_RSA_WITH_DES_CBC_SHA,SSL_DHE_RSA_WITH_DES_CBC_SHA,SSL_DHE_DSS_WITH_DES_CBC_SHA,SSL_DH_anon_WITH_DES_CBC_SHA,TLS_KRB5_WITH_3DES_EDE_CBC_SHA,TLS_KRB5_WITH_3DES_EDE_CBC_MD5,TLS_KRB5_WITH_DES_CBC_SHA,TLS_KRB5_WITH_DES_CBC_MD5,TLS_KRB5_EXPORT_WITH_DES_CBC_40_SHA,TLS_KRB5_EXPORT_WITH_DES_CBC_40_SHA,TLS_KRB5_EXPORT_WITH_DES_CBC_40_MD5,TLS_ECDH_anon_WITH_3DES_EDE_CBC_SHA,SSL_DH_anon_WITH_3DES_EDE_CBC_SHA,SSL_RSA_EXPORT_WITH_DES40_CBC_SHA,SSL_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA,SSL_DHE_DSS_EXPORT_WITH_DES40_CBC_SHA,SSL_DH_anon_EXPORT_WITH_DES40_CBC_SHA,TLS_RSA_WITH_NULL_SHA256,TLS_ECDHE_ECDSA_WITH_NULL_SHA,TLS_ECDHE_RSA_WITH_NULL_SHA,SSL_RSA_WITH_NULL_SHA,RSA_NULL_SHA256,TLS_ECDH_RSA_WITH_NULL_SHA,TLS_ECDH_anon_WITH_NULL_SHA,SSL_RSA_WITH_NULL_MD5,TLS_DH_anon_WITH_AES_256_GCM_SHA384,TLS_DH_anon_WITH_AES_128_GCM_SHA256,TLS_DH_anon_WITH_AES_256_CBC_SHA256,TLS_ECDH_anon_WITH_AES_256_CBC_SHA,TLS_DH_anon_WITH_AES_256_CBC_SHA,TLS_DH_anon_WITH_AES_128_CBC_SHA256,TLS_ECDH_anon_WITH_AES_128_CBC_SHA,TLS_DH_anon_WITH_AES_128_CBC_SHA,TLS_DHE_RSA_WITH_AES_256_GCM_SHA384,TLS_DHE_RSA_WITH_AES_256_CBC_SHA256,TLS_DHE_RSA_WITH_AES_256_CBC_SHA,TLS_DHE_RSA_WITH_AES_128_GCM_SHA256,TLS_DHE_RSA_WITH_AES_128_CBC_SHA256,TLS_DHE_RSA_WITH_AES_128_CBC_SHA,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384,TLS_RSA_WITH_AES_128_CBC_SHA,TLS_RSA_WITH_AES_128_CBC_SHA256,TLS_RSA_WITH_AES_256_CBC_SHA,TLS_RSA_WITH_AES_256_CBC_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384,TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384,TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384,TLS_DHE_DSS_WITH_AES_256_CBC_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA,TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA,TLS_ECDH_RSA_WITH_AES_256_CBC_SHA,TLS_DHE_DSS_WITH_AES_256_CBC_SHA,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256,TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256,TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256,TLS_DHE_DSS_WITH_AES_128_CBC_SHA256,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA,TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA,TLS_ECDH_RSA_WITH_AES_128_CBC_SHA,TLS_DHE_DSS_WITH_AES_128_CBC_SHA
+Jan 27, 2020 6:35:29 AM com.infinera.nm.ems.server.tools.EvaluateCiphers filterOutVulnerabeCiphers
+SEVERE: Supported Ciphers:TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384,TLS_DHE_DSS_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256,TLS_DHE_DSS_WITH_AES_128_GCM_SHA256,TLS_EMPTY_RENEGOTIATION_INFO_SCSV
+2020-01-27 06:35:29,715 Web Parameter [IP] : address="10.220.5.169"
+2020-01-27 06:35:29,715 Web Port : 8080
+2020-01-27 06:35:29,788 Starting DNA  in secure mode,set up keystore & truststore
+2020-01-27 06:35:29,788 Initialized ssl keystore & truststore
+2020-01-27 06:35:29,865 No. of CPU(s) : 24
+2020-01-27 06:35:29,865 Deep Discovery Min Threads: 30
+2020-01-27 06:35:29,865 Deep Discovery Max Threads: 32
+2020-01-27 06:35:29,866 No. of CPU(s) : 24
+2020-01-27 06:35:29,866 Deep Discovery Min Threads: 30
+2020-01-27 06:35:29,867 Deep Discovery Max Threads: 32
+2020-01-27 06:35:29,876 SSL is ENABLED , set CLIENT_SERVER to SSL
+2020-01-27 06:35:36,193 Created TRIGGER HTBL_MPLSINTERFA_LOG_DEL_TRG
+2020-01-27 06:35:36,206 Created TRIGGER HTBL_MPLSINTERFA_LOG_INS_TRG
+2020-01-27 06:35:36,222 Created TRIGGER HTBL_SA_LOG_DEL_TRG
+2020-01-27 06:35:36,233 Created TRIGGER HTBL_SA_LOG_INS_TRG
+2020-01-27 06:35:36,248 Created TRIGGER HTBL_LSP_LOG_DEL_TRG
+2020-01-27 06:35:36,258 Created TRIGGER HTBL_LSP_LOG_INS_TRG
+2020-01-27 06:35:36,272 Created TRIGGER HTBL_MA_LOG_DEL_TRG
+2020-01-27 06:35:36,283 Created TRIGGER HTBL_MA_LOG_INS_TRG
+2020-01-27 06:35:36,298 Created TRIGGER HTBL_DBCONTROL_LOG_DEL_TRG
+2020-01-27 06:35:36,308 Created TRIGGER HTBL_DBCONTROL_LOG_INS_TRG
+2020-01-27 06:35:36,324 Created TRIGGER HTBL_SWCONTROL_LOG_DEL_TRG
+2020-01-27 06:35:36,334 Created TRIGGER HTBL_SWCONTROL_LOG_INS_TRG
+2020-01-27 06:35:36,349 Created TRIGGER HTBL_MD_LOG_DEL_TRG
+2020-01-27 06:35:36,360 Created TRIGGER HTBL_MD_LOG_INS_TRG
+2020-01-27 06:35:36,378 Created TRIGGER HTBL_SELECTOR_LOG_DEL_TRG
+2020-01-27 06:35:36,388 Created TRIGGER HTBL_SELECTOR_LOG_INS_TRG
+2020-01-27 06:35:36,403 Created TRIGGER HTBL_FIBERPATCH_LOG_DEL_TRG
+2020-01-27 06:35:36,414 Created TRIGGER HTBL_FIBERPATCH_LOG_INS_TRG
+2020-01-27 06:35:36,430 Created TRIGGER HTBL_LOCALCERTIF_LOG_DEL_TRG
+2020-01-27 06:35:36,441 Created TRIGGER HTBL_LOCALCERTIF_LOG_INS_TRG
+2020-01-27 06:35:36,458 Created TRIGGER HTBL_XFR_LOG_DEL_TRG
+2020-01-27 06:35:36,468 Created TRIGGER HTBL_XFR_LOG_INS_TRG
+2020-01-27 06:35:36,484 Created TRIGGER HTBL_PEERCERTIFI_LOG_DEL_TRG
+2020-01-27 06:35:36,495 Created TRIGGER HTBL_PEERCERTIFI_LOG_INS_TRG
+2020-01-27 06:35:36,510 Created TRIGGER HTBL_IKEPEER_LOG_DEL_TRG
+2020-01-27 06:35:36,520 Created TRIGGER HTBL_IKEPEER_LOG_INS_TRG
+2020-01-27 06:35:36,536 Created TRIGGER Alert_LOG_DEL_TRG
+2020-01-27 06:35:36,545 Created TRIGGER Alert_LOG_INS_TRG
+2020-01-27 06:35:36,583 Created TRIGGER HTBL_EVENT_LOG_DEL_TRG
+2020-01-27 06:35:36,593 Created TRIGGER HTBL_EVENT_LOG_INS_TRG
+2020-01-27 06:35:36,607 Created TRIGGER HTBL_COSMAPPROFI_LOG_DEL_TRG
+2020-01-27 06:35:36,618 Created TRIGGER HTBL_COSMAPPROFI_LOG_INS_TRG
+2020-01-27 06:35:36,633 Created TRIGGER HTBL_VLANASSOCIA_LOG_DEL_TRG
+2020-01-27 06:35:36,643 Created TRIGGER HTBL_VLANASSOCIA_LOG_INS_TRG
+2020-01-27 06:35:36,658 Created TRIGGER HTBL_SECUREENTIT_LOG_DEL_TRG
+2020-01-27 06:35:36,668 Created TRIGGER HTBL_SECUREENTIT_LOG_INS_TRG
+2020-01-27 06:35:36,682 Created TRIGGER HTBL_BWPROFILE_LOG_DEL_TRG
+2020-01-27 06:35:36,692 Created TRIGGER HTBL_BWPROFILE_LOG_INS_TRG
+2020-01-27 06:35:36,709 Created TRIGGER HTBL_AC_LOG_DEL_TRG
+2020-01-27 06:35:36,719 Created TRIGGER HTBL_AC_LOG_INS_TRG
+2020-01-27 06:35:36,745 Created TRIGGER HTBL_ME_LOG_DEL_TRG
+2020-01-27 06:35:36,756 Created TRIGGER HTBL_ME_LOG_INS_TRG
+2020-01-27 06:35:36,771 Created TRIGGER HTBL_MEP_LOG_DEL_TRG
+2020-01-27 06:35:36,783 Created TRIGGER HTBL_MEP_LOG_INS_TRG
+2020-01-27 06:35:36,800 Created TRIGGER HTBL_PW_LOG_DEL_TRG
+2020-01-27 06:35:36,811 Created TRIGGER HTBL_PW_LOG_INS_TRG
+2020-01-27 06:35:36,826 Created TRIGGER HTBL_VSI_LOG_DEL_TRG
+2020-01-27 06:35:36,836 Created TRIGGER HTBL_VSI_LOG_INS_TRG
+2020-01-27 06:35:36,845 Created FUNCTION cnm_is_customer_present_hex
+2020-01-27 06:35:36,872 Created TRIGGER CNM_SYMBOL_trg
+2020-01-27 06:35:36,901 Created TRIGGER cnm_tribptp_trg
+2020-01-27 06:35:36,925 Created TRIGGER cnm_fiberlink_trg
+2020-01-27 06:35:36,947 Created TRIGGER cnm_me_trg
+2020-01-27 06:35:36,974 Created TRIGGER cnm_otsptp_trg
+2020-01-27 06:35:37,001 Created TRIGGER cnm_xcon_trg
+2020-01-27 06:35:37,032 Created TRIGGER cnm_snclocal_trg
+2020-01-27 06:35:37,058 Created TRIGGER cnm_subsnclocal_trg
+2020-01-27 06:35:37,083 Created TRIGGER cnm_association_trg
+2020-01-27 06:35:37,101 Created TRIGGER cnm_alert_trg
+2020-01-27 06:35:37,116 Created TRIGGER cnm_event_trg
+2020-01-27 06:35:37,125 Created TYPE LICENSEENTITYPAGE
+2020-01-27 06:35:37,128 Created TYPE STRING_ARRAY
+2020-01-27 06:35:37,130 Created PROCEDURE getLicensableEntityPage
+2020-01-27 06:35:37,134 Created TYPE EVENTPAGE
+2020-01-27 06:35:37,138 Created TYPE SEVCOUNT
+2020-01-27 06:35:37,140 Created TYPE NUM_ARRAY
+2020-01-27 06:35:37,142 Created PROCEDURE getEventPage
+2020-01-27 06:35:37,144 Created PROCEDURE getEventPageWithoutNodeNumber
+2020-01-27 06:35:37,147 Created PROCEDURE getEventPageSelection
+2020-01-27 06:35:37,150 Created TYPE ALARMPAGE
+2020-01-27 06:35:37,154 Created TYPE ALARMSEVCOUNT
+2020-01-27 06:35:37,156 Created PROCEDURE getAlarmPage
+2020-01-27 06:35:37,159 Created PROCEDURE getAlarmPageWithoutNodeNumber
+2020-01-27 06:35:37,161 Created PROCEDURE getAlarmPageSelection
+2020-01-27 06:35:37,181 Created TRIGGER HTBL_VIRTUALNODE_AD_TRIG
+2020-01-27 06:35:37,213 Created VIEW multinodeAlarmSAP_VW
+2020-01-27 06:35:37,216 Created FUNCTION update_dchctp_used25gslots
+2020-01-27 06:35:37,218 Created FUNCTION free_equipment_count
+2020-01-27 06:35:37,222 Created TYPE trib_tokens_table
+2020-01-27 06:35:37,225 Created FUNCTION get_trib_tokens_null
+2020-01-27 06:35:37,227 Created FUNCTION get_trib_tokens_not_null
+2020-01-27 06:35:37,229 Created FUNCTION get_ATNtrib_tokens_null
+2020-01-27 06:35:37,231 Created FUNCTION get_ATNtrib_tokens_not_null
+2020-01-27 06:35:37,233 Created FUNCTION string_tokenizer
+2020-01-27 06:35:37,263 Created VIEW EVENT_VW
+2020-01-27 06:35:37,286 Created VIEW VW_PUITEMS
+2020-01-27 06:35:37,297 Created VIEW SO_XCON_VW
+2020-01-27 06:35:37,341 Created VIEW moudulation_count_vw
+2020-01-27 06:35:37,348 Created VIEW CHASSIS_TYPE_COUNT
+2020-01-27 06:35:37,362 Created VIEW CLIENT_FRU_COUNT
+2020-01-27 06:35:37,400 Created VIEW INSTALLED_EQUIPMENT_COUNT
+2020-01-27 06:35:37,408 Created VIEW LINE_CARDS_COUNT
+2020-01-27 06:35:37,417 Created VIEW OPTICAL_FRU_COUNT
+2020-01-27 06:35:37,427 Created VIEW TIM_TAM_SIM_FRU_TYPES
+2020-01-27 06:35:37,437 Created VIEW TIM_TAM_SIM_SLOT_DETAILS
+2020-01-27 06:35:37,448 Created VIEW OTM_SLOTS_DETAILS
+2020-01-27 06:35:37,457 Created VIEW DLM_SLOT_DETAILS
+2020-01-27 06:35:37,472 Created TRIGGER DELETE_EVENT_TRG
+2020-01-27 06:35:37,475 Created FUNCTION INSERT_FACILITIESCLR
+2020-01-27 06:35:37,494 Created TRIGGER HTBL_XCONCLR_AI_TRG
+2020-01-27 06:35:37,496 Created FUNCTION BULK_INSERT_FACILITIESCLR
+2020-01-27 06:35:37,499 Created FUNCTION INSERT_OFACILITIESCLR
+2020-01-27 06:35:37,515 Created TRIGGER HTBL_OXCONCLR_AI_TRG
+2020-01-27 06:35:37,518 Created FUNCTION BULK_INSERT_OFACILITIESCLR
+2020-01-27 06:35:37,541 Created TRIGGER HTBL_VCEP_BI_TRG
+2020-01-27 06:35:37,561 Created TRIGGER HTBL_NMTRANSPORTLIST_BI_TRG
+2020-01-27 06:35:37,563 Created FUNCTION PURGE_EVENTS
+2020-01-27 06:35:37,565 Created FUNCTION PURGE_LOGEVENTS
+2020-01-27 06:35:37,579 Created VIEW LM_INVENTORY
+2020-01-27 06:35:37,588 Created VIEW TIM_SLOT_UTILIZATION_DETAILS
+2020-01-27 06:35:37,597 Created VIEW TAM_SLOT_UTILIZATION_DETAILS
+2020-01-27 06:35:37,607 Created VIEW OTM_SLOT_UTILIZATION_DETAILS
+2020-01-27 06:35:37,624 Created TRIGGER NBM_LMBWTHRESHOLD_UPD_TRG
+2020-01-27 06:35:43,540 Recreating sequences
+2020-01-27 06:35:44,265 MAX ID FROM DB computed=1575728200
+2020-01-27 06:35:44,587 drop sequence INFEMS_SEQ accomplished
+2020-01-27 06:35:44,840 Created sequence INFEMS_SEQ (1575728200)
+2020-01-27 06:35:45,070 drop sequence INFEMSALARM_SEQ accomplished
+2020-01-27 06:35:45,285 Created sequence INFEMSALARM_SEQ (77264)
+2020-01-27 06:35:45,500 drop sequence INFEMSEVENT_SEQ accomplished
+2020-01-27 06:35:45,705 Created sequence INFEMSEVENT_SEQ (2270883)
+2020-01-27 06:35:46,061 Please wait while DNA server creates the table partitions.
+2020-01-27 06:35:46,607 No. of CPU(s) : 24
+2020-01-27 06:35:46,607 Deep Discovery Min Threads: 30
+2020-01-27 06:35:46,607 Deep Discovery Max Threads: 32
+2020-01-27 06:35:46,608 No. of CPU(s) : 24
+2020-01-27 06:35:46,608 Deep Discovery Min Threads: 30
+2020-01-27 06:35:46,608 Deep Discovery Max Threads: 32
+2020-01-27 06:35:46,618 SSL is ENABLED , set CLIENT_SERVER to SSL
+2020-01-27 06:35:46,857 Max Read Write Threads/Max Discovery Threads : 32
+2020-01-27 06:35:46,857 Max Read only Threads/Max MOPP Threads : 20
+2020-01-27 06:35:46,857 Extra Read only Threads in Server BE are 20
+2020-01-27 06:35:46,857 Extra Read Write Threads in Server BE are 20
+2020-01-27 06:35:46,857 Max Read only Locks in Server BE are 40
+2020-01-27 06:35:46,857 Max Read write Locks in Server BE are 52
+2020-01-27 06:35:46,857 Min DB Connection pool size in Server BE is 52
+2020-01-27 06:35:46,857 Max DB Connection pool size in Server BE is 92
+2020-01-27 06:35:46,859 readOnlyTxnsSemaphore Count:40
+2020-01-27 06:35:46,859 readWriteTxnsSemaphore Count:52
+This evaluation copy is valid for 77 days
+
+************** Starting DNA Processes ***************
+
+
+Starting Elasticsearch.
+Starting Nginx.
+Starting Logstash.
+2020-01-27 06:36:41,746 Uncompressed Address : 10.220.5.169
+2020-01-27 06:36:41,749 Compressed Address : 10.220.5.169
+Error while doing pre Logstash operations.
+
+
+Process :   Elasticsearch Server          [Started]
+
+Process :   IRMIRunProcess                [Started]
+
+Process :   CnmServerModule               [Started]
+
+Process :   DNACommunicationSetupBE       [Started]
+
+Process :   Network Bandwidth Manager     [Scheduled]
+
+Process :   InfineraMessageProcess        [Started]
+
+Process :   EMSCommunicationSetupFE       [Started]
+
+Process :   SecurityModule                [Started]
+
+Process :   GrooveHistoricPMDataMonitor               [Started]
+
+Process :   Web Server                    [Started]
+
+Process :   Stomp Notification Manager    [Started]
+
+Process :   Elasticsearch Data Sync       [Started]
+
+Process :   Camel Integration Manager     [Started]
+
+Process :   IViewDNAMain                  [Started]
+
+Process :   InfineraSNMPTrapListener      [Started]
+
+Process :   InfineraOSSCommonLoader       [Skipped]
+
+Process :   InfineraCorbaOSSLoader        [Started]
+
+Process :   InfineraXISLoader             [Skipped]
+
+Process :   DBHealthMonitor               [Started]
+
+Process :   ResourceMonitor               [Started]
+
+Process :   CommandLineMessageServer      [Started]
+
+
+
+Infinera DNA Server modules started successfully at 2020-01-27 06:41:00Z
+
+
+Please connect your client to the web server on 10.220.5.169:8443 using Secure HTTP Protocol
+
+
+2020-01-27 12:11:00,239 - __main__ - INFO - 2020-01-27 12:11:00.239436
+2020-01-27 12:11:00,240 - __main__ - INFO - Doing periodic DB queries
+2020-01-27 12:11:00,240 - __main__ - INFO - Latest timestamp = 1579873352899
+2020-01-27 12:11:30,546 - __main__ - INFO -  ATN = 0, CX = 66, DON = 125, OA = 23, OLA = 78, ROADM = 8, XT = 12, GROOVE = 0, XTM = 0
+2020-01-27 12:12:00,773 - __main__ - INFO -  ATN = 0, CX = 107, DON = 226, OA = 99, OLA = 90, ROADM = 12, XT = 23, GROOVE = 0, XTM = 0
+2020-01-27 12:12:30,981 - __main__ - INFO -  ATN = 0, CX = 107, DON = 268, OA = 137, OLA = 90, ROADM = 12, XT = 65, GROOVE = 0, XTM = 0
+2020-01-27 12:13:01,190 - __main__ - INFO -  ATN = 0, CX = 107, DON = 320, OA = 161, OLA = 125, ROADM = 13, XT = 113, GROOVE = 0, XTM = 0
+2020-01-27 12:13:31,376 - __main__ - INFO -  ATN = 0, CX = 107, DON = 353, OA = 161, OLA = 190, ROADM = 13, XT = 113, GROOVE = 0, XTM = 0
+2020-01-27 12:14:01,592 - __main__ - INFO -  ATN = 0, CX = 107, DON = 373, OA = 161, OLA = 266, ROADM = 13, XT = 113, GROOVE = 0, XTM = 0
+2020-01-27 12:14:31,829 - __main__ - INFO -  ATN = 0, CX = 107, DON = 432, OA = 161, OLA = 317, ROADM = 13, XT = 113, GROOVE = 0, XTM = 0
+2020-01-27 12:15:02,060 - __main__ - INFO -  ATN = 0, CX = 107, DON = 482, OA = 161, OLA = 344, ROADM = 13, XT = 113, GROOVE = 0, XTM = 0
+2020-01-27 12:15:32,269 - __main__ - INFO -  ATN = 0, CX = 107, DON = 543, OA = 195, OLA = 352, ROADM = 15, XT = 138, GROOVE = 0, XTM = 0
+2020-01-27 12:16:02,463 - __main__ - INFO -  ATN = 0, CX = 107, DON = 604, OA = 195, OLA = 353, ROADM = 22, XT = 185, GROOVE = 0, XTM = 0
+2020-01-27 12:16:32,706 - __main__ - INFO -  ATN = 0, CX = 107, DON = 681, OA = 242, OLA = 353, ROADM = 41, XT = 204, GROOVE = 0, XTM = 0
+2020-01-27 12:17:02,939 - __main__ - INFO -  ATN = 0, CX = 107, DON = 747, OA = 297, OLA = 353, ROADM = 98, XT = 212, GROOVE = 0, XTM = 0
+2020-01-27 12:17:33,142 - __main__ - INFO -  ATN = 0, CX = 115, DON = 818, OA = 318, OLA = 388, ROADM = 157, XT = 221, GROOVE = 0, XTM = 0
+2020-01-27 12:18:03,335 - __main__ - INFO -  ATN = 0, CX = 136, DON = 874, OA = 328, OLA = 427, ROADM = 188, XT = 224, GROOVE = 0, XTM = 0
+2020-01-27 12:18:33,566 - __main__ - INFO -  ATN = 0, CX = 153, DON = 924, OA = 348, OLA = 469, ROADM = 202, XT = 225, GROOVE = 0, XTM = 0
+2020-01-27 12:19:03,776 - __main__ - INFO -  ATN = 0, CX = 175, DON = 985, OA = 375, OLA = 529, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:19:33,968 - __main__ - INFO -  ATN = 0, CX = 175, DON = 997, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:20:04,156 - __main__ - INFO -  ATN = 0, CX = 175, DON = 997, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:20:34,355 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:21:04,565 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:21:34,827 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:22:05,011 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:22:35,199 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:23:05,408 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:23:35,587 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:24:05,768 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:24:35,952 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:25:06,145 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:25:36,323 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:26:06,503 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:26:36,742 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:27:06,927 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:27:37,108 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:28:07,310 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:28:37,492 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:29:07,671 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:29:37,843 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:30:08,035 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:30:38,214 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:31:08,393 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:31:38,622 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:32:08,802 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:32:38,979 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:33:09,158 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:33:39,343 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:34:09,517 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:34:39,733 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:35:09,937 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:35:40,116 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:36:10,305 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:36:40,545 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:37:10,732 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:37:40,916 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:38:11,099 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:38:41,295 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:39:11,479 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:39:41,655 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:40:11,837 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:40:42,082 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:41:12,275 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:41:42,506 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:42:12,686 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:42:42,880 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:43:13,053 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:43:43,230 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:44:13,418 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:44:43,597 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:45:13,769 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:45:43,956 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:46:14,233 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:46:44,474 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:47:14,656 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:47:44,829 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:48:15,012 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:48:45,186 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:49:15,378 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:49:45,555 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:50:15,734 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:50:45,924 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:51:16,102 - __main__ - INFO -  ATN = 0, CX = 175, DON = 998, OA = 376, OLA = 542, ROADM = 205, XT = 228, GROOVE = 0, XTM = 0
+2020-01-27 12:51:46,405 - __main__ - INFO -  ATN = 254, CX = 175, DON = 1020, OA = 415, OLA = 542, ROADM = 220, XT = 266, GROOVE = 0, XTM = 0
+2020-01-27 12:52:16,601 - __main__ - INFO -  ATN = 523, CX = 175, DON = 1050, OA = 450, OLA = 542, ROADM = 243, XT = 269, GROOVE = 0, XTM = 0
+2020-01-27 12:52:46,817 - __main__ - INFO -  ATN = 684, CX = 175, DON = 1081, OA = 491, OLA = 542, ROADM = 270, XT = 278, GROOVE = 0, XTM = 0
+2020-01-27 12:53:17,018 - __main__ - INFO -  ATN = 728, CX = 175, DON = 1090, OA = 499, OLA = 542, ROADM = 294, XT = 278, GROOVE = 0, XTM = 0
+2020-01-27 12:53:47,256 - __main__ - INFO -  ATN = 827, CX = 175, DON = 1102, OA = 512, OLA = 542, ROADM = 349, XT = 279, GROOVE = 0, XTM = 0
+2020-01-27 12:54:17,439 - __main__ - INFO -  ATN = 936, CX = 175, DON = 1112, OA = 525, OLA = 542, ROADM = 385, XT = 280, GROOVE = 0, XTM = 0
+2020-01-27 12:54:47,629 - __main__ - INFO -  ATN = 936, CX = 175, DON = 1112, OA = 525, OLA = 542, ROADM = 385, XT = 280, GROOVE = 0, XTM = 0
+2020-01-27 12:55:17,827 - __main__ - INFO -  ATN = 936, CX = 175, DON = 1112, OA = 525, OLA = 542, ROADM = 385, XT = 280, GROOVE = 0, XTM = 0
+2020-01-27 12:55:48,004 - __main__ - INFO -  ATN = 936, CX = 175, DON = 1112, OA = 525, OLA = 542, ROADM = 385, XT = 280, GROOVE = 0, XTM = 0
+2020-01-27 12:56:18,193 - __main__ - INFO -  ATN = 936, CX = 175, DON = 1112, OA = 525, OLA = 542, ROADM = 385, XT = 280, GROOVE = 0, XTM = 0
+2020-01-27 12:56:48,417 - __main__ - INFO -  ATN = 936, CX = 175, DON = 1112, OA = 525, OLA = 542, ROADM = 385, XT = 280, GROOVE = 0, XTM = 0
+2020-01-27 12:56:48,422 - __main__ - INFO - Script execution completed
